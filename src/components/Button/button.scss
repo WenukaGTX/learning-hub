@@ -1,0 +1,11 @@
+.button {
+    color: black;
+
+    &-primary {
+        border-radius: 4px;
+    }
+
+    &-secondary {
+        padding: 20px;
+    }
+}
