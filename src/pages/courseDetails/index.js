@@ -2,7 +2,7 @@
 
 function CourseDetails() {
   return (
-    <div className="App">
+    <div className="">
       Course Details
     </div>
   );

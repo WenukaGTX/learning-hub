@@ -2,8 +2,8 @@
 
 function SignUp() {
   return (
-    <div className="App">
-      Home
+    <div className="">
+      Sign up
     </div>
   );
 }
