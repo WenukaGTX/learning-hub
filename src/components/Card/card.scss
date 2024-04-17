@@ -1,0 +1,23 @@
+.card {
+    text-align: center;
+
+    .card-image {
+        margin-bottom: 16px;
+    }
+
+    .card-header {
+        margin-top: 0;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .card-description {
+        margin-bottom: 0;
+    }
+
+    &.round {
+        .card-image {
+            border-radius: 50%;
+        }
+    }
+}
