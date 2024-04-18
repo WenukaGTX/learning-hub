@@ -70,9 +70,11 @@ function CourseDetails() {
         <div className='pt-4'>
           <div className="container">
             <h3 className='mb-3'>Learners work at</h3>
-            <div className='logo-block'>
+            <div className='row'>
               {companyLogos.map((logo) => (
-                <img key={logo.id} src={logo.logo} alt={`logo ${logo.id}`} />
+                <div class="col-3 mb-2 text-center" key={logo.id}>
+                  <img src={logo.logo} alt={`logo ${logo.id}`} />
+                </div>
               ))}
             </div>
           </div>
