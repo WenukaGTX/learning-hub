@@ -1,0 +1,27 @@
+
+section {
+    &.type0 {
+        .content-area {
+            .cols-container {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                .cols {
+                    flex-basis: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    margin: 0 1.5rem 0 0;
+
+                    p {
+                        margin: 0 0 2rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
