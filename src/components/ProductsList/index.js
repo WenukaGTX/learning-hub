@@ -47,7 +47,6 @@ function ProductList() {
                                         <div className='product-details'>
                                             <h4>{item.title}</h4>
                                             <p>{item.description}</p>
-
                                             
                                             <div className='tab-cta'>
                                                 <Button type="secondary" buttonText="View course"></Button>
