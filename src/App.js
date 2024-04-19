@@ -8,8 +8,6 @@ import Navbar from "./components/Navbar";
 import CourseDetails from "./pages/courseDetails";
 import Home from "./pages/home";
 import SignUp from "./pages/signUp";
-import ProductsList from "./pages/productsList";
-
 
 function App() {
   return (
@@ -21,7 +19,6 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/course-details" element={<CourseDetails />}></Route>
             <Route path="/sign-up" element={<SignUp />}></Route>
-            <Route path="/products-list" element={<ProductsList />}></Route>
           </Routes>
         </div>
       </Router>

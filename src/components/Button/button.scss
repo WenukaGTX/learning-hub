@@ -29,7 +29,7 @@
         border-radius: 4px;
         background-color: #0fd46c;
         border: 1px solid #0fd46c;
-        color: #0d333f;
+        color: #ffffff;
 
         &.banner {
             background-color: #0fd46c;
@@ -56,6 +56,12 @@
             border: 2px solid #0d333f;
             color: #ffffff;
         }
+
+        &.selected {
+            background-color: #0d333f;
+            border: 2px solid #0d333f;
+            color: #ffffff;
+        }
     }
 
     /* Nav Bar Buttons */
@@ -66,6 +72,32 @@
         background-color: #0d333f;
         border: 1px solid #0d333f;
         color: #ffffff;
+
+        &.secondary {
+            background-color: #ffffff;
+            border: 2px solid #0d333f;
+            color: #0d333f;
+
+            &:hover {
+                background-color: #0d333f;
+                border: 2px solid #0d333f;
+                color: #ffffff;
+            }
+        }
+    }
+
+
+    /* Products list buttons*/
+    &-filter-btn {
+        font-weight: normal;
+        
+
+        &.primary {
+            border-radius: 4px;
+            background-color: #0d333f;
+            border: 1px solid #0d333f;
+            color: #ffffff;
+        }
 
         &.secondary {
             background-color: #ffffff;
