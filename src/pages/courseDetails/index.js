@@ -3,39 +3,47 @@ import Button from '../../components/Button';
 import ListItem from '../../components/ListItem';
 import Card from '../../components/Card';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 function CourseDetails() {
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [product, setproduct] = useState([]);
   const [suites, setSuites] = useState([]);
   const [companyLogos, setCompanyLogos] = useState([]);
   const [benefits, setBenefits] = useState([]);
   const [highScorers, setHighScorers] = useState([]);
 
+  const { id } = useParams();
+
   useEffect(() => {
-    const url = "https://661783abed6b8fa43482d698.mockapi.io/intuit/training/reactjs/products/1";
+    const url = `https://661783abed6b8fa43482d698.mockapi.io/intuit/training/reactjs/products/${id}`;
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setproduct(json);
-        setSuites(json.suites);
-        setCompanyLogos(json.partnerCompanies);
-        setBenefits(json.benefits);
-        setHighScorers(json.highScorers)
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Product not found!');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setproduct(data);
+        setSuites(data.suites);
+        setCompanyLogos(data.partnerCompanies);
+        setBenefits(data.benefits);
+        setHighScorers(data.highScorers)
         setLoading(false);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
+      })
+      .catch(error => {
+        setLoading(false);
+        setErrorMessage(error);
+      });
+  }, [id]);
 
-    fetchData();
-  }, []);
-
-  if (!loading) {
+  if (!loading && !errorMessage) {
     return (
       <div>
+        <p>Product ID: {id}</p>
         <div className="banner banner-secondary">
           <div className="container">
             <img className="mb-1" src="https://placehold.co/100" alt="course logo" />
@@ -118,6 +126,10 @@ function CourseDetails() {
 
   if (loading) {
     return (<div className="container text-center pt-4">Loading...</div>)
+  }
+
+  if (errorMessage) {
+    return (<div className="container text-center pt-4">{errorMessage.message}</div>)
   }
 }
 
