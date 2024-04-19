@@ -1,0 +1,133 @@
+h2 {
+    text-align: center;
+}
+
+/* Remove browser defaults */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+   
+ .benefits-section {
+  background: #f3f2ef;
+ }
+
+
+  .App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  /* Tab Container */
+  .Tabs {
+    width: 80%;
+    height: auto;
+    min-height: 320px;
+    padding: 0;
+    color: #393a3d;   
+    display: flex;
+    flex-direction: row;    
+    column-gap: 30px;
+  }
+   
+  .react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  }
+   
+  .react-tabs__tab-list {
+    width: 30%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+   
+  .react-tabs__tab {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    list-style: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.7s;    
+    height: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    font-weight: bold;  
+    background: #ffffff;
+    //border: 1px solid #d4d7dc;   
+    position: relative;
+
+    &:hover {
+      &:after {
+        //content:'';
+        display: inline-block;
+        width:0;
+        height:0;
+        border: 60px solid transparent;
+        position: absolute;
+        right: -120px;
+        border-left-color: #e3e5ea;
+      }
+    }
+
+  }
+   
+  .react-tabs__tab--selected {
+    background: #e3e5ea;
+    border: 0;
+    outline: 0;
+  }
+   
+  .react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+  }
+   
+  .react-tabs__tab:hover {
+    background: #e3e5ea;
+  }
+
+  .react-tabs__tab-panel {
+    display: none;
+  }
+   
+  .react-tabs__tab-panel--selected {
+    display: block;
+    font-size: 2rem;
+    text-align: left;
+    padding: 2rem;
+    border-radius: 4px;
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0 0.375rem 1.5rem 0 rgba(0,0,0,.2); 
+    margin-left: 20px;
+  }
+
+  .tabpanel-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    position: relative;
+
+    
+  }
+
+.tab-cta {
+  margin: 1rem 0 0 0;
+}
+
+.benefit-icon {
+  img {
+    height: 150px;
+  }
+}
