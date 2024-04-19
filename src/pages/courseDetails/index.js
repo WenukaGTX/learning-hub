@@ -43,7 +43,6 @@ function CourseDetails() {
   if (!loading && !errorMessage) {
     return (
       <div>
-        <p>Product ID: {id}</p>
         <div className="banner banner-secondary">
           <div className="container">
             <img className="mb-1" src="https://placehold.co/100" alt="course logo" />
