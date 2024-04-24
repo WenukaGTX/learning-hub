@@ -31,10 +31,10 @@ function ProductList() {
             <h2>Find what's right for you</h2>
             <div className='filter-container'>
               <div className='filter-btn-area'>
-                <Button type="secondary selected" buttonText="All" onClick={() => handleCategoryClick(null)}></Button>
-                <Button type="secondary" buttonText="By Product" onClick={() => handleCategoryClick(1)}></Button>
-                <Button type="secondary" buttonText="By Role" onClick={() => handleCategoryClick(2)}></Button>
-                <Button type="secondary" buttonText="By Purpose" onClick={() => handleCategoryClick(3)}></Button>
+                <Button type={`secondary ${selectedCategory === null ? 'selected' : ''}`} buttonText="All" onClick={() => handleCategoryClick(null)}></Button>
+                <Button type={`secondary ${selectedCategory === 1 ? 'selected' : ''}`} buttonText="By Product" onClick={() => handleCategoryClick(1)}></Button>
+                <Button type={`secondary ${selectedCategory === 2 ? 'selected' : ''}`} buttonText="By Role" onClick={() => handleCategoryClick(2)}></Button>
+                <Button type={`secondary ${selectedCategory === 3 ? 'selected' : ''}`} buttonText="By Purpose" onClick={() => handleCategoryClick(3)}></Button>
               </div>
               <div className='filter-body'>
                 <div className='list-section'>
