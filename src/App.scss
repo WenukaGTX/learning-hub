@@ -173,6 +173,15 @@ section {
   padding: 5rem 0;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -219,6 +228,7 @@ section {
     line-height: 3.75rem;
     margin: 0 0 4rem 0;
     color: #0d333f;
+    width: 90%;
   }
 }
 
@@ -241,7 +251,7 @@ section {
   background-color: #ffffff;
   background-clip: padding-box;
   border: 1px solid #dee2e6;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
   &:focus {
@@ -260,5 +270,28 @@ section {
   color: #dc3545;
   margin-top: 4px;
 }
+
+.success-message-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem 2rem;
+  border: 1px solid #d4d7dc;
+  border-radius: 4px;
+
+  h3.success-message {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+ }
+
+ img {
+  width: 40px;
+  height: 40px;
+ }
+}
+
+
 
 // End forms

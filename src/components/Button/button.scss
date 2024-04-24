@@ -108,4 +108,23 @@
             }
         }
     }
+
+    /* subscribe buttons */
+
+    &-subs-btn {
+
+        &.primary {
+            background-color: #0d333f;
+            border: 1px solid #0d333f;
+            color: #ffffff;  
+
+            &:hover {
+                background-color: #ffffff;
+                border: 2px solid #0d333f;
+                color: #0d333f;
+            }
+        }
+        
+        
+    }
 }

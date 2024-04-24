@@ -1,0 +1,47 @@
+.subscription-section {
+    background: #f3f2ef;
+    .wrapper {
+        section {
+            h2,h4 {
+                text-align: center;
+            }
+
+            h2 {
+                margin: 0 0 3rem 0;
+            }
+            h4 {
+                margin: 0 0 4rem 0;
+            }
+
+            .submit-form {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 20px;
+                min-width: 400px;
+
+                .input-field {
+                    min-width: 300px;
+
+                    &:focus {
+                        border-color: #0d333f;
+                        outline: 0;
+                        box-shadow: 0 0 0 2px rgba(13, 51, 63, 0.25);
+                      }
+                }
+            }
+
+            .emailsubs-container {
+                max-width: 500px;
+            }
+
+            .success-message-container {
+                background: #ffffff;
+            }
+
+        }
+    }
+   
+    
+}
