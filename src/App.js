@@ -14,13 +14,11 @@ function App() {
     <div className='learning-hub-container'>
       <Router>
         <Navbar />
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/course-details/:id" element={<CourseDetails />}></Route>
-            <Route path="/sign-up" element={<SignUp />}></Route>
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/course-details/:id" element={<CourseDetails />}></Route>
+          <Route path="/sign-up" element={<SignUp />}></Route>
+        </Routes>
       </Router>
     </div>
   );
