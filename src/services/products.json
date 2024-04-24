@@ -200,7 +200,10 @@
         "sortOrder": 1,
         "webinarCount": 84,
         "code": "pr_qbo",
-        "categoryId": 1,
+        "categoryArray": [
+            1,
+            2
+        ],
         "duration": "5 hours 45 minutes",
         "lastUpdated": "03/2024",
         "rating": 4.8,
@@ -322,7 +325,10 @@
         "sortOrder": 2,
         "webinarCount": 9,
         "code": "pr_qbopayments",
-        "categoryId": 42,
+        "categoryArray": [
+            1,
+            3
+        ],
         "duration": 385,
         "lastUpdated": 1713425847,
         "rating": 4.2,
@@ -331,5 +337,113 @@
         "benefits": [],
         "highScorers": [],
         "id": "2"
+    },
+    {
+        "title": "QuickBooks Time",
+        "description": "Learn how to help your clients track and manage employees' working hours and run reports using QuickBooks Time.",
+        "status": "Active",
+        "suites": [
+            {
+                "id": 55,
+                "title": "Getting started with QuickBooks Payments",
+                "description": "Find out how to get started with QuickBooks Online Payments and the GoPayments app.",
+                "icon": "https://uat.intuittrainingplatform.com/filestoreV2/SuiteFiles/55/il_utl_payments.png",
+                "duration": 0,
+                "displayDuration": "0 mins",
+                "cpePoints": 0,
+                "suiteBundleContents": [],
+                "bundleSuitesPathwayViewModels": null,
+                "isCertPrepSuite": false,
+                "type": "Default",
+                "cpePointsDisplayText": "0 CPE credits",
+                "productId": 0,
+                "displayOrder": 1
+            },
+            {
+                "id": 56,
+                "title": "Working with QuickBooks Payments",
+                "description": "Explore the various features and capabilities of QuickBooks Online Payments.",
+                "icon": "https://uat.intuittrainingplatform.com/filestoreV2/SuiteFiles/56/il_utl_receive_payment.png",
+                "duration": 0,
+                "displayDuration": "0 mins",
+                "cpePoints": 0,
+                "suiteBundleContents": [],
+                "bundleSuitesPathwayViewModels": null,
+                "isCertPrepSuite": false,
+                "type": "Default",
+                "cpePointsDisplayText": "0 CPE credits",
+                "productId": 0,
+                "displayOrder": 2
+            }
+        ],
+        "sortOrder": 2,
+        "webinarCount": 9,
+        "code": "pr_qbopayments",
+        "categoryArray": [
+            2,
+            3
+        ],
+        "duration": 385,
+        "lastUpdated": 1713425847,
+        "rating": 4.2,
+        "noOfEnrollments": 5763,
+        "partnerCompanies": [],
+        "benefits": [],
+        "highScorers": [],
+        "id": "3"
+    },
+    {
+        "title": "Bookkeeping principles",
+        "description": "Learn how to help your clients track and manage employees' working hours and run reports using QuickBooks Time.",
+        "status": "Active",
+        "suites": [
+            {
+                "id": 55,
+                "title": "Getting started with QuickBooks Payments",
+                "description": "Find out how to get started with QuickBooks Online Payments and the GoPayments app.",
+                "icon": "https://uat.intuittrainingplatform.com/filestoreV2/SuiteFiles/55/il_utl_payments.png",
+                "duration": 0,
+                "displayDuration": "0 mins",
+                "cpePoints": 0,
+                "suiteBundleContents": [],
+                "bundleSuitesPathwayViewModels": null,
+                "isCertPrepSuite": false,
+                "type": "Default",
+                "cpePointsDisplayText": "0 CPE credits",
+                "productId": 0,
+                "displayOrder": 1
+            },
+            {
+                "id": 56,
+                "title": "Working with QuickBooks Payments",
+                "description": "Explore the various features and capabilities of QuickBooks Online Payments.",
+                "icon": "https://uat.intuittrainingplatform.com/filestoreV2/SuiteFiles/56/il_utl_receive_payment.png",
+                "duration": 0,
+                "displayDuration": "0 mins",
+                "cpePoints": 0,
+                "suiteBundleContents": [],
+                "bundleSuitesPathwayViewModels": null,
+                "isCertPrepSuite": false,
+                "type": "Default",
+                "cpePointsDisplayText": "0 CPE credits",
+                "productId": 0,
+                "displayOrder": 2
+            }
+        ],
+        "sortOrder": 2,
+        "webinarCount": 9,
+        "code": "pr_qbopayments",
+        "categoryArray": [
+            2,
+            3
+        ],
+        "duration": 385,
+        "lastUpdated": 1713425847,
+        "rating": 4.2,
+        "noOfEnrollments": 5763,
+        "partnerCompanies": [],
+        "benefits": [],
+        "highScorers": [],
+        "id": "4"
     }
 ]

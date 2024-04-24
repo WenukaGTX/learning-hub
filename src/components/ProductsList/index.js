@@ -6,13 +6,22 @@ import icon1 from '../../images/icons/icon-65.png';
 
 function ProductList() {
   const [products, setproducts] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
-    fetch('https://intuit-tp-bundlebitesize-api-staging.azurewebsites.net/api/v1/ProductSuite/products/info')
+    fetch('https://661783abed6b8fa43482d698.mockapi.io/intuit/training/reactjs/products')
       .then(response => response.json())
       .then(data => setproducts(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+
+  const filteredItems = selectedCategory
+    ? products.filter(product => product.categoryArray.includes(selectedCategory))
+    : products;
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
 
   return (
     <div className='productslist-section'>
@@ -22,14 +31,15 @@ function ProductList() {
             <h2>Find what's right for you</h2>
             <div className='filter-container'>
               <div className='filter-btn-area'>
-                <Button type="secondary selected" buttonText="By Product"></Button>
-                <Button type="secondary" buttonText="By Role"></Button>
-                <Button type="secondary" buttonText="By Purpose"></Button>
+                <Button type={`secondary ${selectedCategory === null ? 'selected' : ''}`} buttonText="All" onClick={() => handleCategoryClick(null)}></Button>
+                <Button type={`secondary ${selectedCategory === 1 ? 'selected' : ''}`} buttonText="By Product" onClick={() => handleCategoryClick(1)}></Button>
+                <Button type={`secondary ${selectedCategory === 2 ? 'selected' : ''}`} buttonText="By Role" onClick={() => handleCategoryClick(2)}></Button>
+                <Button type={`secondary ${selectedCategory === 3 ? 'selected' : ''}`} buttonText="By Purpose" onClick={() => handleCategoryClick(3)}></Button>
               </div>
               <div className='filter-body'>
                 <div className='list-section'>
                   <div className='product-list'>
-                    {products && products.map(item => (
+                    {filteredItems && filteredItems.map(item => (
                       <div key={item.id} className='product-list-item'>
                         <div className='item-body'>
                           <div className='product-icon'>
