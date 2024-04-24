@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './subscription.scss';
 import Button from '../../components/Button';
-import tick from '../../images/icons/tick-mark.png';
+import tick from '../../images/icons/il_life_celebrate_01.png';
 
 function Subscription() {
 
@@ -19,7 +19,7 @@ function Subscription() {
 
 
     if (formData.email.trim() === '') {
-      newErrors.email = 'Name is required';
+      newErrors.email = 'Email is required';
       isValid = false;
     } else {
       newErrors.email = '';
@@ -59,7 +59,7 @@ function Subscription() {
         }
 
         
-        setSuccessMessage('Email submitted successfully!');
+        setSuccessMessage('Thank you for subscribing!');
 
         setFormData({email: '' });
 

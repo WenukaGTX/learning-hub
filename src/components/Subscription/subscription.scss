@@ -33,11 +33,15 @@
             }
 
             .emailsubs-container {
-                max-width: 500px;
+                max-width: 600px;
             }
 
             .success-message-container {
                 background: #ffffff;
+
+                img {
+                    width: 230px;
+                }
             }
 
         }
