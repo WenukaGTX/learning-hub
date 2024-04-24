@@ -107,7 +107,6 @@ function Subscription() {
                       />
 
                       <span className="input-error">{errors.email}</span>
-
                       
                     </div>
 
