@@ -6,6 +6,7 @@ import Subscription from '../../components/Subscription';
 import SuccessStories from '../../components/SuccessStories';
 import FrequentlyAskedQuestions from '../faq';
 
+import FooterSection from '../../components/Footer';
 import './home.scss';
 
 function Home() {
@@ -16,8 +17,9 @@ function Home() {
       <ProductsList/>
       <AssitedLearning/>
       <SuccessStories />
-      <FrequentlyAskedQuestions/>
-      <Subscription/>
+      <FrequentlyAskedQuestions />
+      <Subscription />
+      <FooterSection />
     </div>
   );
 }

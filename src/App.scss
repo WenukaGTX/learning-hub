@@ -188,6 +188,11 @@ section,
   align-items: center;
 }
 
+body > div:last-child section {
+  padding: 0;
+}
+
+
 .content-area {
   display: flex;
   flex-direction: column;
@@ -304,3 +309,9 @@ section,
 
 
 // End forms
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
