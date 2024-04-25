@@ -1,0 +1,67 @@
+.accordion {
+    width: 80%;
+
+    .item {
+        border-top: .0625rem solid rgba(0, 0, 0, .2);
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.5rem 0;
+            font-size: 1.25rem;    
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            &:hover {
+
+                p{
+
+                    color: #0a8543;
+                }
+
+                svg {
+                    stroke: #0a8543;
+                }
+            }
+        }
+
+        .hidden-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            padding-right: 2.5rem;
+        }
+        .active-box {
+            max-height: 245px;
+            margin-bottom: 2rem;
+            transition: max-height 0.5s ease;
+        }
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        
+        transform: rotate(0);
+        transition: max-height 0.5s ease;
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+        transition: max-height 0.5s ease;
+    }
+}
