@@ -26,7 +26,7 @@ const successStoryItems = [
 function successStories(props) {
   return (
     <div className='pt-4'>
-      <div className="container">
+      <div className="container section">
         <h2 className='text-center mb-3'>High scorers</h2>
         <div className='row'>
           {successStoryItems.map((item) => (
