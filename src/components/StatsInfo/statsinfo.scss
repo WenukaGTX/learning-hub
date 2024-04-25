@@ -12,11 +12,56 @@ section {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    justify-content: space-between;
-                    margin: 0 2.5rem 0 0;
+                    justify-content: flex-start;
+                    margin: 0 3.5rem 0 0;
+                    
+                    h4 {
+                        font-size: 2rem;
+                        line-height: 2.75rem;
+                        margin: 0 0 1rem 0;
+                        color: #393a3d;
+                        text-align: center;
+                        font-weight: 600;    
+                        width: 80%;
+                    }
 
                     p {
                         margin: 0 0 2rem 0;
+                    }
+
+                    &.features {
+                        background-color: #dbedee;
+                        padding: 2rem 1.5rem;
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin: 0 2.5rem 0 0;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .features {
+                    max-width: 320px;
+
+                    .button-secondary {
+                        background-color: #0d333f;
+                        border: 2px solid #0d333f;
+                        color: #ffffff;  
+
+                        &:hover {
+                            background-color: #ffffff;
+                            border: 2px solid #0d333f;
+                            color: #0d333f;
+                        }
                     }
                 }
             }

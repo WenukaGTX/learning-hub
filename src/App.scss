@@ -178,7 +178,8 @@ p {
   position: relative;
 }
 
-section {
+section,
+.section {
   padding: 5rem 0 7rem 0;
   margin: 0 auto;
   position: relative;
@@ -228,7 +229,8 @@ p {
   color: #393a3d;
 }
 
-section {
+section,
+.section {
   h1 {
     font-size: 4rem;
   }

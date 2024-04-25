@@ -14,8 +14,8 @@ function Home() {
       <Banner/>
       <QuickbooksStats/>
       <ProductsList/>
-      <SuccessStories />
       <AssitedLearning/>
+      <SuccessStories />
       <FrequentlyAskedQuestions/>
       <Subscription/>
     </div>
