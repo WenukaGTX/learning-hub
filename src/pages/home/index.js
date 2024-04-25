@@ -3,6 +3,7 @@ import QuickbooksStats from '../../components/StatsInfo';
 import ProductsList from '../../components/ProductsList';
 import AssitedLearning from '../../components/Benefits';
 import Subscription from '../../components/Subscription';
+import SuccessStories from '../../components/SuccessStories';
 import FrequentlyAskedQuestions from '../faq';
 
 import './home.scss';
@@ -13,6 +14,7 @@ function Home() {
       <Banner/>
       <QuickbooksStats/>
       <ProductsList/>
+      <SuccessStories />
       <AssitedLearning/>
       <FrequentlyAskedQuestions/>
       <Subscription/>
