@@ -26,7 +26,7 @@ function App() {
                                 <h4>Enhanced learning experience</h4>
                                 <p>Tab 1 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                                 <div className='tab-cta'>
-                                    <Button type="secondary" buttonText="Read more"></Button>
+                                    <Button buttonText="Read more"></Button>
                                 </div>
                             </div>
                         </div>

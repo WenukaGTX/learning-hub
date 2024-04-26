@@ -47,10 +47,10 @@ function ProductList() {
               </div>
             ))}
           </div>
-          <div className='text-center mt-2'>
+          {/* <div className='text-center mt-2'>
             <h4 className='mb-2'>Not sure what do you need?</h4>
             <Link to='/course-details' className='button button-primary'>View all courses</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import './faq.scss';
 
 import React, { useState, useEffect } from 'react';
 
-function FrequentQuestions() {
+function FAQs() {
     const [faqset, setFaqset] = useState(null);
 
     useEffect(() => {
@@ -36,4 +36,4 @@ function FrequentQuestions() {
     )
 }
 
-export default FrequentQuestions;
+export default FAQs;

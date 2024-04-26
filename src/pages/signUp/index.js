@@ -70,10 +70,10 @@ function SignUp() {
   };
 
   return (
-    <div className="signup-form mt-3">
-      <div className="container pt-2">
-        <h4 className="text-center">Sign up</h4>
-        {!successMessage &&
+    <div className="bg-ash pt-4 pb-4">
+      <div className="signup-form">
+        <div className="container">
+          <h4 className="text-center">Sign up</h4>
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
               <label className="input-label" htmlFor="fName">First Name:</label>
@@ -115,8 +115,8 @@ function SignUp() {
 
             <Button className="width-100" type="primary" buttonText="Submit" />
           </form>
-        }
-        {successMessage && <h4 className="text-center">{successMessage}</h4>}
+          {successMessage && <h5 className="text-center mt-3 mb-0">{successMessage}</h5>}
+        </div>
       </div>
     </div>
   );

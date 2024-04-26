@@ -1,9 +1,8 @@
-import './courseDetails.scss';
-import Button from '../../components/Button';
-import ListItem from '../../components/ListItem';
-import Card from '../../components/Card';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Card from '../../components/Card';
+import ListItem from '../../components/ListItem';
+import './courseDetails.scss';
 
 function CourseDetails() {
   const [loading, setLoading] = useState(true);
@@ -58,7 +57,7 @@ function CourseDetails() {
               <p>{product.noOfEnrollments} enrollments</p>
             </div>
             <p className='mb-3'>{product.description}</p>
-            <Button type="primary" buttonText="Enroll for free" />
+            <Link to='/sign-up' className='button button-primary'>Enroll for free</Link>
           </div>
         </div>
         <section className='section-padding bt-ash'>
