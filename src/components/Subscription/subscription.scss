@@ -1,52 +1,26 @@
-.subscription-section {
-    background: #f3f2ef;
-    .wrapper {
-        section {
-            h2,h4 {
-                text-align: center;
-            }
+.subscribe-form {
+    margin: 30px auto 0;
 
-            h2 {
-                margin: 0 0 3rem 0;
-            }
-            h4 {
-                margin: 0 0 4rem 0;
-            }
+    .email-input {
+        margin-bottom: 10px;
+    }
 
-            .submit-form {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 20px;
-                min-width: 400px;
-                min-height: 60px;
+    .button {
+        width: 100%;
+    }
 
-                .input-field {
-                    min-width: 300px;
+    @media only screen and (min-width: 576px) {
+        width: 500px;
+        display: flex;
+        align-items: flex-start;
 
-                    &:focus {
-                        border-color: #0d333f;
-                        outline: 0;
-                        box-shadow: 0 0 0 2px rgba(13, 51, 63, 0.25);
-                      }
-                }
-            }
+        .email-input {
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
 
-            .emailsubs-container {
-                max-width: 600px;
-            }
-
-            .success-message-container {
-                background: #ffffff;
-
-                img {
-                    width: 230px;
-                }
-            }
-
+        .button {
+            width: auto;
         }
     }
-   
-    
 }
