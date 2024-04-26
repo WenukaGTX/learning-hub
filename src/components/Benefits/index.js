@@ -7,78 +7,63 @@ import icon3 from '../../images/icons/il_life_team_02 copy.png';
 
 function App() {
     return (
-        <div className='benefits-section'>
-            <div className='wrapper'>
-                <section className="section type0">
-                    <h2>Assisted Learning Process</h2>
-                    
-                    <div className="App">
-                        <Tabs className="Tabs">
-                            <TabList>
-                                <Tab>Enhanced learning experience</Tab>
-                                <Tab>Unlimited access</Tab>
-                                <Tab>Community support</Tab>
-                            </TabList>
+        <section className='section-padding bt-ash'>
+            <div className='container'>
+                <h2 className='mb-4 text-center'>Assisted Learning Process</h2>
+                <Tabs className="Tabs">
+                    <TabList>
+                        <Tab>Enhanced learning experience</Tab>
+                        <Tab>Unlimited access</Tab>
+                        <Tab>Community support</Tab>
+                    </TabList>
 
-                            <TabPanel>
-                                <div className='tabpanel-body'>
-                                    <div className='benefit-icon'>
-                                        <img src={icon1} alt="icon1" />
-                                    </div>
-                                    <div>
-                                        <h4>Enhanced learning experience</h4>
-                                        <p>Tab 1 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-
-                                        
-                                        <div className='tab-cta'>
-                                            <Button type="secondary" buttonText="Read more"></Button>
-                                        </div>
-                                    </div>
+                    <TabPanel>
+                        <div className='tabpanel-body'>
+                            <div className='benefit-icon'>
+                                <img src={icon1} alt="icon1" />
+                            </div>
+                            <div>
+                                <h4>Enhanced learning experience</h4>
+                                <p>Tab 1 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <div className='tab-cta'>
+                                    <Button type="secondary" buttonText="Read more"></Button>
                                 </div>
-                                
-                            </TabPanel>
+                            </div>
+                        </div>
+                    </TabPanel>
 
-                            <TabPanel>
-                                <div className='tabpanel-body'>
-                                    <div className='benefit-icon'>
-                                        <img src={icon2} alt="icon2" />
-                                    </div>
-                                    <div>
-                                        <h4>Unlimited access</h4>
-                                        <p>Tab 2 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                        
-                                        <div className='tab-cta'>
-                                            <Button type="secondary" buttonText="Read more"></Button>
-                                        </div>
-                                    </div>
+                    <TabPanel>
+                        <div className='tabpanel-body'>
+                            <div className='benefit-icon'>
+                                <img src={icon2} alt="icon2" />
+                            </div>
+                            <div>
+                                <h4>Unlimited access</h4>
+                                <p>Tab 2 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <div className='tab-cta'>
+                                    <Button type="secondary" buttonText="Read more"></Button>
                                 </div>
-                            </TabPanel>
-
-                            <TabPanel>
-                                <div className='tabpanel-body'>
-                                    <div className='benefit-icon'>
-                                        <img src={icon3} alt="icon3" />
-                                    </div>
-                                    <div>
-                                        <h4>Community support</h4>
-                                        <p>Tab 3 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-
-                                        
-                                        <div className='tab-cta'>
-                                            <Button type="secondary" buttonText="Read more"></Button>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className='tabpanel-body'>
+                            <div className='benefit-icon'>
+                                <img src={icon3} alt="icon3" />
+                            </div>
+                            <div>
+                                <h4>Community support</h4>
+                                <p>Tab 3 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <div className='tab-cta'>
+                                    <Button type="secondary" buttonText="Read more"></Button>
                                 </div>
-                            </TabPanel>
-
-                            </Tabs>
-                    </div>
-                </section>
-                
+                            </div>
+                        </div>
+                    </TabPanel>
+                </Tabs>
             </div>
-        </div>
-        
+        </section>
     );
-   }
-    
-   export default App;
+}
+
+export default App;
