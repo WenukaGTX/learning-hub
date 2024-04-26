@@ -2,21 +2,25 @@ import Card from '../../components/Card';
 
 const successStoryItems = [
   {
+    "id": 1,
     "image": "https://placehold.co/120",
     "title": "Title goes here",
     "description": "Subtitle goes here"
   },
   {
+    "id": 2,
     "image": "https://placehold.co/120",
     "title": "Title goes here",
     "description": "Subtitle goes here"
   },
   {
+    "id": 3,
     "image": "https://placehold.co/120",
     "title": "Title goes here",
     "description": "Subtitle goes here"
   },
   {
+    "id": 4,
     "image": "https://placehold.co/120",
     "title": "Title goes here",
     "description": "Subtitle goes here"
