@@ -189,6 +189,7 @@
 .spacer {
   margin-right: 6px;
   margin-left: 6px;
+  margin-bottom: 0;
 }
 
 .info-row {
@@ -253,8 +254,16 @@ p {
   margin-bottom: 16px;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 a {
@@ -264,6 +273,10 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.white {
+  color: #ffffff;
 }
 
 // End typography
