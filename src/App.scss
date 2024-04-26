@@ -1,8 +1,8 @@
 // Layout
 .container {
   width: 100%;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding-right: 12px;
+  padding-left: 12px;
   margin-right: auto;
   margin-left: auto;
 
@@ -163,11 +163,12 @@ p {
 }
 
 .learning-hub-body-container {
-  > div {
+  >div {
     background: #f3f2ef;
   }
-  > div:nth-child(even){
-    background-color:#ffffff;
+
+  >div:nth-child(even) {
+    background-color: #ffffff;
   }
 }
 
@@ -188,7 +189,7 @@ section,
   align-items: center;
 }
 
-body > div:last-child section {
+body>div:last-child section {
   padding: 0;
 }
 
@@ -302,7 +303,7 @@ section,
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
- }
+  }
 
 }
 
