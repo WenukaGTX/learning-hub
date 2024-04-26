@@ -1,0 +1,26 @@
+.subscribe-form {
+    margin: 30px auto 0;
+
+    .email-input {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 576px) {
+        width: 500px;
+        display: flex;
+        align-items: flex-start;
+
+        .email-input {
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
+
+        .button {
+            width: auto;
+        }
+    }
+}

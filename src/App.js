@@ -1,15 +1,26 @@
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 import './App.scss';
-import CourseDetails from './pages/CourseDetails';
-import SignUp from './pages/SignUp';
-import Home from './pages/home';
+import Navbar from "./components/Navbar";
+import CourseDetails from "./pages/courseDetails";
+import Home from "./pages/home";
+import SignUp from "./pages/signUp";
+import FooterSection from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <CourseDetails />
-      <SignUp />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/course-details/:id" element={<CourseDetails />}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
+      </Routes>
+      <FooterSection />
+    </Router>
   );
 }
 

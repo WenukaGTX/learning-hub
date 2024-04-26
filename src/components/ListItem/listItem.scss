@@ -1,0 +1,19 @@
+.list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    .list-icon {
+        margin-right: 16px;
+    }
+
+    .list-header {
+        margin-top: 0;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .list-description {
+        margin-bottom: 0;
+    }
+}

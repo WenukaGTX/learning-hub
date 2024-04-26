@@ -1,0 +1,37 @@
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.product {
+    border: 1px solid #e3e3e3;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+
+    .product-image {
+        margin-right: 16px;
+    }
+
+    .product-details {
+        
+    }
+
+    .item-body {
+        h4 {
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+}

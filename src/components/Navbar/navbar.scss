@@ -1,0 +1,17 @@
+.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &>.container {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-right {
+        a+a {
+            margin-left: 16px;
+        }
+    }
+}
