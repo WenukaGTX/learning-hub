@@ -30,8 +30,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 12px;
-  margin-left: 12px;
+  margin-right: -12px;
+  margin-left: -12px;
 
   &>* {
     flex-shrink: 0;
@@ -43,8 +43,18 @@
 }
 
 .col-3 {
-  flex: 0 0 auto;
-  width: 33.33333333%;
+  &+.col-3 {
+    margin-top: 16px;
+  }
+
+  @media only screen and (min-width: 576px) {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+
+    &+.col-3 {
+      margin-top: 0;
+    }
+  }
 }
 
 .col-4 {
@@ -112,6 +122,11 @@
   padding-top: 40px;
 }
 
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .width {
   width: 100%;
 }
@@ -122,6 +137,20 @@
 
 .mr-auto {
   margin-right: auto;
+}
+
+.spacer {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-bottom: 8px;
+  }
 }
 
 // End spacing
@@ -161,19 +190,16 @@ p {
   text-align: center;
 }
 
-.spacer {
-  margin-right: 6px;
-  margin-left: 6px;
-}
+a {
+  text-decoration: none;
+  color: #212529;
 
-.info-row {
-  display: flex;
-  align-items: center;
-
-  p {
-    margin-bottom: 8px;
+  &:hover {
+    text-decoration: underline;
   }
 }
+
+// End typography
 
 
 
@@ -194,11 +220,6 @@ section,
   flex-direction: column;
   align-items: center;
 }
-
-body>div:last-child section {
-  padding: 0;
-}
-
 
 .content-area {
   display: flex;
