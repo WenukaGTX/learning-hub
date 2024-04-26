@@ -11,16 +11,14 @@ import SignUp from "./pages/signUp";
 
 function App() {
   return (
-    <div className='learning-hub-container'>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/course-details/:id" element={<CourseDetails />}></Route>
-          <Route path="/sign-up" element={<SignUp />}></Route>
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/course-details/:id" element={<CourseDetails />}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
