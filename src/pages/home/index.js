@@ -5,7 +5,7 @@ import ProductsList from '../../components/ProductsList';
 import QuickbooksStats from '../../components/StatsInfo';
 import Subscription from '../../components/Subscription';
 import SuccessStories from '../../components/SuccessStories';
-import FrequentlyAskedQuestions from '../faq';
+import FrequentlyAskedQuestions from '../../components/faq';
 
 function Home() {
   return (

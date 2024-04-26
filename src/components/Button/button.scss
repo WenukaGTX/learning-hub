@@ -11,8 +11,10 @@
     cursor: pointer;
     user-select: none;
     padding: 8px 12px;
+    min-height: 42px;
     font-size: 16px;
     border-radius: 4px;
+    white-space: nowrap;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     &:hover {

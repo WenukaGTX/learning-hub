@@ -113,7 +113,7 @@ function SignUp() {
               {errors.email && <div className="input-error">{errors.email}</div>}
             </div>
 
-            <Button className="width" type="primary" buttonText="Submit" />
+            <Button className="width-100" type="primary" buttonText="Submit" />
           </form>
         }
         {successMessage && <h4 className="text-center">{successMessage}</h4>}

@@ -6,6 +6,11 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media(max-width: 576px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   @media(min-width: 576px) {
     max-width: 540px;
   }
@@ -50,27 +55,25 @@
 }
 
 .col-3 {
-  &+.col-3 {
-    margin-top: 16px;
-  }
-
   @media only screen and (min-width: 576px) {
     flex: 0 0 auto;
     width: 33.33333333%;
-
-    &+.col-3 {
-      margin-top: 0;
-    }
   }
 }
 
 .col-4 {
-  flex: 0 0 auto;
-  width: 25%;
+  @media only screen and (min-width: 576px) {
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 
 .flex {
   display: flex;
+}
+
+.align-items-start {
+  align-items: flex-start;
 }
 
 .align-items-center {
@@ -89,6 +92,10 @@
   margin-top: auto;
 }
 
+.mt-0 {
+  margin-top: 0;
+}
+
 .mt-1 {
   margin-top: 10px;
 }
@@ -99,6 +106,26 @@
 
 .mt-3 {
   margin-top: 30px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .mb-1 {
@@ -115,6 +142,28 @@
 
 .mb-4 {
   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 576px) {
+  .mb-2-xs {
+    margin-bottom: 20px;
+  }
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 20px;
 }
 
 .pt-1 {
@@ -138,21 +187,14 @@
   padding-bottom: 80px;
 }
 
-.width {
+.width-100 {
   width: 100%;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
 }
 
 .spacer {
   margin-right: 6px;
   margin-left: 6px;
+  margin-bottom: 0;
 }
 
 .info-row {
@@ -217,8 +259,16 @@ p {
   margin-bottom: 16px;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 a {
@@ -228,6 +278,10 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.white {
+  color: #ffffff;
 }
 
 // End typography
@@ -266,7 +320,8 @@ section,
 .input-field {
   display: block;
   width: 100%;
-  padding: 6px 12px;
+  padding: 8px 12px;
+  min-height: 42px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
