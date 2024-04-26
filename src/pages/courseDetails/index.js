@@ -43,7 +43,7 @@ function CourseDetails() {
   if (!loading && !errorMessage) {
     return (
       <div>
-        <div className="banner banner-secondary">
+        <div className="banner banner-dark">
           <div className="container">
             <img className="mb-1" src="https://placehold.co/100" alt="course logo" />
             <h1>{product.title}</h1>
@@ -61,9 +61,9 @@ function CourseDetails() {
             <Button type="primary" buttonText="Enroll for free" />
           </div>
         </div>
-        <div className='pt-4'>
+        <section className='section-padding bt-ash'>
           <div className="container">
-            <h3>Course contents</h3>
+            <h3 className='mb-3'>Course contents</h3>
             {suites.map((suit) => (
               <ListItem
                 key={suit.id}
@@ -73,10 +73,10 @@ function CourseDetails() {
               />
             ))}
           </div>
-        </div>
-        <div className='pt-4'>
+        </section>
+        <section className='section-padding bt-ash'>
           <div className="container">
-            <h3 className='mb-3'>Learners work at</h3>
+            <h3 className='mb-2'>Learners work at</h3>
             <div className='row'>
               {companyLogos.map((logo) => (
                 <div class="col-3 mb-2 text-center" key={logo.id}>
@@ -85,13 +85,13 @@ function CourseDetails() {
               ))}
             </div>
           </div>
-        </div>
-        <div className='pt-4'>
+        </section>
+        <section className='section-padding bt-ash'>
           <div className="container">
             <h3 className='text-center mb-3'>Benefits of the career path</h3>
             <div className='row'>
               {benefits.map((item) => (
-                <div className='col-4' key={item.id}>
+                <div className='col-4 mb-2-xs' key={item.id}>
                   <Card
                     image={item.image}
                     title={item.title}
@@ -101,13 +101,13 @@ function CourseDetails() {
               ))}
             </div>
           </div>
-        </div>
-        <div className='pt-4'>
+        </section>
+        <section className='section-padding bt-ash'>
           <div className="container">
             <h3 className='text-center mb-3'>High scorers</h3>
             <div className='row'>
               {highScorers.map((item) => (
-                <div className='col-4' key={item.id}>
+                <div className='col-4 mb-2-xs' key={item.id}>
                   <Card
                     type="round"
                     image={item.image}
@@ -118,17 +118,17 @@ function CourseDetails() {
               ))}
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }
 
   if (loading) {
-    return (<div className="container text-center pt-4">Loading...</div>)
+    return (<div className="container flex align-items-center justify-content-center vh-fit">Loading...</div>)
   }
 
   if (errorMessage) {
-    return (<div className="container text-center pt-4">{errorMessage.message}</div>)
+    return (<div className="container flex align-items-center justify-content-center vh-fit">{errorMessage.message}</div>)
   }
 }
 

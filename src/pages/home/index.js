@@ -1,6 +1,5 @@
 import Banner from '../../components/Banner';
 import AssitedLearning from '../../components/Benefits';
-import FooterSection from '../../components/Footer';
 import ProductsList from '../../components/ProductsList';
 import QuickbooksStats from '../../components/StatsInfo';
 import Subscription from '../../components/Subscription';
@@ -17,7 +16,6 @@ function Home() {
       <SuccessStories />
       <FrequentlyAskedQuestions />
       <Subscription />
-      <FooterSection />
     </div>
   );
 }

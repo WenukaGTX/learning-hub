@@ -84,6 +84,10 @@
   justify-content: space-between;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 // end layout
 
 // Spacing
@@ -220,6 +224,10 @@
 
 .br-ash {
   border-right: 1px solid #e3e3e3;
+}
+
+.vh-fit {
+  height: calc(100vh - 168px);
 }
 
 // End spacing
