@@ -1,34 +1,8 @@
-  .benefits-section {
-    background: #ffffff;
-  }
-
-
-  .App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Tab Container */
-  .Tabs {
-    width: 80%;
-    height: auto;
-    min-height: 320px;
-    padding: 0;
-    color: #393a3d;
-    display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-  }
-
-  .react-tabs {
-    -webkit-tap-highlight-color: transparent;
-  }
+.Tabs {
+  display: flex;
 
   .react-tabs__tab-list {
-    width: 30%;
     margin: 0;
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-left: 0px;
@@ -66,12 +40,10 @@
         border-left-color: #e3e5ea;
       }
     }
-
   }
 
   .react-tabs__tab--selected {
     background: #e3e5ea;
-    border: 0;
     outline: 0;
   }
 
@@ -85,19 +57,19 @@
   }
 
   .react-tabs__tab-panel {
+    font-size: 16px;
     display: none;
+    margin-left: 20px;
   }
 
   .react-tabs__tab-panel--selected {
     display: block;
-    font-size: 2rem;
     text-align: left;
     padding: 2rem;
     border-radius: 4px;
     background: #ffffff;
     width: 100%;
-    box-shadow: 0 0.375rem 1.5rem 0 rgba(0, 0, 0, .2);
-    margin-left: 20px;
+    border: 1px solid #d4d7dc;
   }
 
   .tabpanel-body {
@@ -107,8 +79,6 @@
     align-items: flex-start;
     height: 100%;
     position: relative;
-
-
   }
 
   .tab-cta {
@@ -120,3 +90,4 @@
       height: 150px;
     }
   }
+}
