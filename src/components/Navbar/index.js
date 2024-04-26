@@ -1,31 +1,17 @@
 import './navbar.scss';
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.PNG';
-import Button from '../Button';
 
 function Navbar() {
   return (
-    <div className="navbar">
-      <div className='wrapper'>
-        <nav className="navigation-wrapper">
-          <div className='nav-container'>
-            <div className="col-nav left">
-              <Link to='/' ><img src={logo} alt="Logo" /></Link>
-            </div>
-
-            <div className="col-nav right">
-              <ul className='nav-bar-list'>
-                <li><Link to='/' >Home</Link></li>
-                
-                <li><Link to='/course-details' >Course Details</Link></li>
-
-                <li><Link to='/sign-up' > <Button type="nav-btn secondary" buttonText="Sign up for FREE" className="nav-btn"></Button></Link></li>
-              </ul>
-            </div>
-          </div>
+    <header className="navbar">
+      <div className='container'>
+        <Link to='/' className='flex'><img src={logo} alt="Logo" /></Link>
+        <nav className="navbar-right">
+          <Link to='/sign-up' className='button button-primary'>Sign up for FREE</Link>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
 
