@@ -1,4 +1,4 @@
-import Accordion from '../../components/Accordion';
+import Accordion from '../Accordion';
 import './faq.scss';
 //import { faqs } from '../../services/faqData.js';
 
