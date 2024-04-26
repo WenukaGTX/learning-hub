@@ -8,7 +8,7 @@ function Banner() {
         <div className='banner-left'>
           <h1>Get certified with QuickBooks for free</h1>
           <h3 className='mb-4'>Gain skills plus a professional certificate</h3>
-          <Button type="button button-primary" buttonText="View certifications"></Button>
+          <Button type="primary" buttonText="View certifications"></Button>
         </div>
         <div className='banner-right'>
           <img src='https://placehold.co/250' alt='banner' />
