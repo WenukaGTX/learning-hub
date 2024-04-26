@@ -42,6 +42,13 @@
   }
 }
 
+.col-2 {
+  @media only screen and (min-width: 576px) {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
 .col-3 {
   &+.col-3 {
     margin-top: 16px;
@@ -77,6 +84,10 @@
 // end layout
 
 // Spacing
+
+.mt-auto {
+  margin-top: auto;
+}
 
 .mt-1 {
   margin-top: 10px;
@@ -153,6 +164,22 @@
   }
 }
 
+.bt-ash {
+  border-top: 1px solid #e3e3e3;
+}
+
+.bl-ash {
+  border-left: 1px solid #e3e3e3;
+}
+
+.bb-ash {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.br-ash {
+  border-right: 1px solid #e3e3e3;
+}
+
 // End spacing
 
 // Typography
@@ -181,6 +208,10 @@ h3 {
   font-size: 36px;
 }
 
+h4 {
+  font-size: 24px;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 16px;
@@ -200,9 +231,6 @@ a {
 }
 
 // End typography
-
-
-
 
 .wrapper {
   width: 90%;
