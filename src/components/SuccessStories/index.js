@@ -29,12 +29,12 @@ const successStoryItems = [
 
 function successStories(props) {
   return (
-    <div className='pt-4'>
-      <div className="container section">
-        <h2 className='text-center mb-3'>High scorers</h2>
+    <section className='section-padding bt-ash'>
+      <div className='container'>
+        <h2 className='mb-2 text-center'>High scorers</h2>
         <div className='row'>
           {successStoryItems.map((item) => (
-            <div className='col-4' key={item.id}>
+            <div className='col-4 mb-2-xs' key={item.id}>
               <Card
                 image={item.image}
                 cardImageSize={240}
@@ -45,7 +45,7 @@ function successStories(props) {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

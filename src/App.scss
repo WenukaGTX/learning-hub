@@ -6,6 +6,11 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media(max-width: 576px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   @media(min-width: 576px) {
     max-width: 540px;
   }
@@ -50,23 +55,17 @@
 }
 
 .col-3 {
-  &+.col-3 {
-    margin-top: 16px;
-  }
-
   @media only screen and (min-width: 576px) {
     flex: 0 0 auto;
     width: 33.33333333%;
-
-    &+.col-3 {
-      margin-top: 0;
-    }
   }
 }
 
 .col-4 {
-  flex: 0 0 auto;
-  width: 25%;
+  @media only screen and (min-width: 576px) {
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 
 .flex {
@@ -143,6 +142,12 @@
 
 .mb-4 {
   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 576px) {
+  .mb-2-xs {
+    margin-bottom: 20px;
+  }
 }
 
 .mr-auto {
