@@ -23,7 +23,7 @@ function ProductList() {
   };
 
   return (
-    <section className='section-padding bt-ash'>
+    <section className='section-padding bt-ash' id='productListHome'>
       <div className='container'>
         <h2 className='mb-4 text-center'>Find what's right for you</h2>
         <div>

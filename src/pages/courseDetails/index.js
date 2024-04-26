@@ -79,7 +79,7 @@ function CourseDetails() {
             <h3 className='mb-2'>Learners work at</h3>
             <div className='row'>
               {companyLogos.map((logo) => (
-                <div class="col-3 mb-2 text-center" key={logo.id}>
+                <div className="col-3 mb-2 text-center" key={logo.id}>
                   <img src={logo.logo} alt={`logo ${logo.id}`} />
                 </div>
               ))}

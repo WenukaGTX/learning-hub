@@ -11,13 +11,13 @@ function Footer() {
           <p className='footer-text'>© 2022 Intuit Inc. All rights reserved</p>
           <nav>
             <Link to='/' className='white'>Terms of Service</Link>
-            <p class="spacer white">|</p>
+            <p className="spacer white">|</p>
             <Link to='/' className='white'>Contact</Link>
-            <p class="spacer white">|</p>
+            <p className="spacer white">|</p>
             <Link to='/' className='white'>Legal</Link>
-            <p class="spacer white">|</p>
+            <p className="spacer white">|</p>
             <Link to='/' className='white'>Privacy</Link>
-            <p class="spacer white">|</p>
+            <p className="spacer white">|</p>
             <Link to='/' className='white'>Security</Link>
           </nav>
         </div>
