@@ -1,9 +1,9 @@
-@import '../../scss/colors';
+@import '../../scss/variables';
 
 .footer {
-    font-size: 14px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    font-size: $font-small;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     background-color: $grey-dark;
 
     .container {
@@ -12,10 +12,10 @@
     }
 
     .footer-logo {
-        margin: 0 auto 20px;
+        margin: 0 auto 1.25rem;
 
         img {
-            height: 30px;
+            height: 1.875rem;
         }
     }
 

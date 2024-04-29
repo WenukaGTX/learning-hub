@@ -1,6 +1,6 @@
 .navbar {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 
     &>.container {
         display: flex;
@@ -10,7 +10,7 @@
 
     .nav-links {
         a+a {
-            margin-left: 16px;
+            margin-left: 1rem;
         }
 
         &.nav-links-right {

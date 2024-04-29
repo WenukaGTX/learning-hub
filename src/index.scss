@@ -1,4 +1,4 @@
-@import './scss/colors';
+@import './scss/variables';
 
 *,
 ::after,
@@ -14,5 +14,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
-  font-size: 16px;
+  font-size: $font-size;
 }

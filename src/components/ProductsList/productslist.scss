@@ -1,4 +1,4 @@
-@import '../../scss/colors';
+@import '../../scss/variables';
 
 .filter-buttons {
     display: flex;
@@ -12,9 +12,8 @@
         webkit-overflow-scroll: touch;
 
         .button {
-            padding: 10px 16px;
-            min-height: 42px;
-            font-size: 18px;
+            padding: 0.625rem 1rem;
+            font-size: $font-large;
         }
     }
 }
@@ -22,14 +21,14 @@
 .product {
     border: 1px solid $ash-light;
     background-color: $white-space;
-    padding: 24px;
-    border-radius: 4px;
+    padding: 1.5rem;
+    border-radius: $border-radius;
     display: flex;
     align-items: flex-start;
     height: 100%;
 
     .product-image {
-        margin-right: 16px;
+        margin-right: 1rem;
     }
 
     .item-body {

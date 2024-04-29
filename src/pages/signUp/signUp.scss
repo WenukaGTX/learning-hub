@@ -1,14 +1,14 @@
-@import '../../scss/colors';
+@import '../../scss/variables';
 
 .signup-form {
-    max-width: 500px;
-    margin-right: 24px;
-    margin-left: 24px;
+    max-width: 30rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     background: $white-space;
     border: 1px solid $ash-light;
-    border-radius: 4px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    border-radius: $border-radius;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 
     @media only screen and (min-width: 576px) {
         margin-right: auto;

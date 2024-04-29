@@ -1,8 +1,8 @@
 .subscribe-form {
-    margin: 30px auto 0;
+    margin: 2rem auto 0;
 
     .email-input {
-        margin-bottom: 10px;
+        margin-bottom: 0.75rem;
     }
 
     .button {
@@ -10,13 +10,13 @@
     }
 
     @media only screen and (min-width: 576px) {
-        width: 500px;
+        width: 30rem;
         display: flex;
         align-items: flex-start;
 
         .email-input {
             margin-bottom: 0;
-            margin-right: 12px;
+            margin-right: 0.75;
         }
 
         .button {

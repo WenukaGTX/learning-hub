@@ -1,9 +1,9 @@
-@import '../../scss/colors';
+@import '../../scss/variables';
 
 .banner {
     background-color: $secondary-color;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     &-dark {
         color: $white-space;
