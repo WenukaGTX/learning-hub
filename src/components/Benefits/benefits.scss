@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .Tabs {
   display: flex;
 
@@ -24,8 +26,8 @@
     justify-content: flex-start;
     font-size: 0.95rem;
     font-weight: bold;
-    background: #ffffff;
-    border: 1px solid #d4d7dc;
+    background: $white-space;
+    border: 1px solid $ash-light;
     position: relative;
 
     &:hover {
@@ -37,13 +39,13 @@
         border: 60px solid transparent;
         position: absolute;
         right: -120px;
-        border-left-color: #e3e5ea;
+        border-left-color: $ash-light;
       }
     }
   }
 
   .react-tabs__tab--selected {
-    background: #e3e5ea;
+    background: $ash-light;
     outline: 0;
   }
 
@@ -53,11 +55,11 @@
   }
 
   .react-tabs__tab:hover {
-    background: #e3e5ea;
+    background: $ash-light;
   }
 
   .react-tabs__tab-panel {
-    font-size: 16px;
+    font-size: $font-size;
     display: none;
     margin-left: 20px;
   }
@@ -66,10 +68,10 @@
     display: block;
     text-align: left;
     padding: 2rem;
-    border-radius: 4px;
-    background: #ffffff;
+    border-radius: $border-radius;
+    background: $white-space;
     width: 100%;
-    border: 1px solid #d4d7dc;
+    border: 1px solid $ash-light;
   }
 
   .tabpanel-body {

@@ -1,34 +1,35 @@
+@import '../../scss/variables';
+
 .filter-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     column-gap: 0.5rem;
-    overflow-x: scroll;
-    webkit-overflow-scroll: touch;
 
     @media only screen and (max-width: 576px) {
+        justify-content: flex-start;
+        overflow-x: scroll;
+        webkit-overflow-scroll: touch;
+
         .button {
-            padding: 10px 16px;
-            min-height: 42px;
-            font-size: 18px;
+            padding: 0.625rem 1rem;
+            font-size: $font-large;
         }
     }
 }
 
 .product {
-    border: 1px solid #e3e3e3;
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 4px;
+    border: 1px solid $ash-light;
+    background-color: $white-space;
+    padding: 1.5rem;
+    border-radius: $border-radius;
     display: flex;
     align-items: flex-start;
     height: 100%;
 
     .product-image {
-        margin-right: 16px;
+        margin-right: 1rem;
     }
-
-    .product-details {}
 
     .item-body {
         h4 {

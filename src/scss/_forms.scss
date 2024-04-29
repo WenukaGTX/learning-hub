@@ -1,0 +1,39 @@
+@import './variables';
+
+.input-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  min-height: 2.75rem;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: 1.5;
+  color: $text-color;
+  appearance: none;
+  background-color: $white-space;
+  background-clip: padding-box;
+  border: 1px solid $ash-light;
+  border-radius: $border-radius;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus {
+    border-color: $primary-accent;
+    outline: 0;
+    box-shadow: 0 0 0 0.125rem $primary-transparent;
+  }
+
+  &.error {
+    border-color: $red;
+  }
+}
+
+.input-error {
+  font-size: 0.875rem;
+  color: $red;
+  margin-top: 0.25rem;
+}

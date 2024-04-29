@@ -1,6 +1,8 @@
+@import '../../scss/variables';
+
 .accordion {
     .item {
-        border-top: .0625rem solid rgba(0, 0, 0, .2);
+        border-top: 1px solid $ash-light;
         border-bottom: none;
         padding: 0;
         margin: 0;
@@ -15,7 +17,7 @@
             width: 100%;
             padding: 1.5rem 0;
             font-size: 1.25rem;    
-            font-weight: 500;
+            font-weight: $font-weight;
             cursor: pointer;
             transition: all 0.5s ease;
             
@@ -28,11 +30,11 @@
 
                 p{
 
-                    color: #0a8543;
+                    color: $primary-color;
                 }
 
                 svg {
-                    stroke: #0a8543;
+                    stroke: $primary-color;
                 }
             }
         }

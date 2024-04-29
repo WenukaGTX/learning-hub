@@ -1,19 +1,21 @@
+@import '../../scss/variables';
+
 .button {
-    color: black;
-    background-color: #ffffff;
-    border: 1px solid #0D333F;
+    color: $black;
+    background-color: $white-space;
+    border: 1px solid $secondary-color;
     display: inline-block;
-    font-weight: 500;
+    font-weight: $font-weight;
     line-height: 1.5;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    padding: 8px 12px;
-    min-height: 42px;
-    font-size: 16px;
-    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    min-height: 2.75rem;
+    font-size: $font-size;
+    border-radius: $border-radius;
     white-space: nowrap;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -21,46 +23,33 @@
         cursor: pointer;
         opacity: 0.9;
         text-decoration: none;
-        color: #ffffff;
-        background-color: #0D333F;
+        color: $white-space;
+        background-color: $secondary-color;
     }
 
     &.selected {
-        background-color: #0D333F;
-        border: 1px solid #0D333F;
-        color: #ffffff;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: $white-space;
     }
 
     &.button-primary {
-        border-radius: 4px;
-        background-color: #0A8543;
-        border: 1px solid #0A8543;
-        color: #ffffff;
-
-        &.banner {
-            background-color: #0d7300;
-            border: 1px solid #0d7300;
-            color: #ffffff;
-
-            &:hover {
-                background-color: #0a8543;
-                border: 1px solid #0a8543;
-                color: #fff;
-            }
-        }
-
+        border-radius: $border-radius;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white-space;
     }
 
     &.button-secondary {
-        border-radius: 4px;
-        background-color: #0D333F;
-        border: 1px solid #0D333F;
-        color: #fff;
+        border-radius: $border-radius;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: $white-space;
 
         &:hover {
-            background-color: #000000;
-            border: 1px solid #000000;
-            color: #ffffff;
+            background-color: $black;
+            border: 1px solid $black;
+            color: $white-space;
         }
     }
 }

@@ -1,16 +1,18 @@
+@import '../../scss/variables';
+
 .list-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 
     .list-icon {
-        margin-right: 16px;
+        margin-right: 1rem;
     }
 
     .list-header {
         margin-top: 0;
-        margin-bottom: 6px;
-        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-weight: $font-weight;
     }
 
     .list-description {
