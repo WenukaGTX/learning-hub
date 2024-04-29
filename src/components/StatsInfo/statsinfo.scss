@@ -1,5 +1,7 @@
+@import '../../scss/colors';
+
 .feature-card {
-    background-color: #f3f3f3;
+    background-color: $ash-light;
     padding: 16px;
     border-radius: 8px;
 }

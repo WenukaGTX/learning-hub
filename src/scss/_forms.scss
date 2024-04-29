@@ -1,0 +1,39 @@
+@import './colors';
+
+.input-label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  min-height: 42px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-color;
+  appearance: none;
+  background-color: white-space;
+  background-clip: padding-box;
+  border: 1px solid $ash-light;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus {
+    border-color: $primary-accent;
+    outline: 0;
+    box-shadow: 0 0 0 2px $primary-transparent;
+  }
+
+  &.error {
+    border-color: $red;
+  }
+}
+
+.input-error {
+  font-size: 14px;
+  color: $red;
+  margin-top: 4px;
+}

@@ -1,6 +1,4 @@
 import Accordion from '../Accordion';
-import './faq.scss';
-//import { faqs } from '../../services/faqData.js';
 
 import React, { useState, useEffect } from 'react';
 

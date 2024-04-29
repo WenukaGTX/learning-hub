@@ -1,8 +1,10 @@
+@import '../../scss/colors';
+
 .footer {
     font-size: 14px;
     padding-top: 24px;
     padding-bottom: 24px;
-    background-color: #393a3d;
+    background-color: $grey-dark;
 
     .container {
         display: flex;
@@ -19,7 +21,7 @@
 
     .footer-right {
         .footer-text {
-            color: #ffffff;
+            color: $white-space;
             text-align: center;
         }
 

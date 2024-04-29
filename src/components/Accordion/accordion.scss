@@ -1,6 +1,8 @@
+@import '../../scss/colors';
+
 .accordion {
     .item {
-        border-top: .0625rem solid rgba(0, 0, 0, .2);
+        border-top: .0625rem solid $ash-light;
         border-bottom: none;
         padding: 0;
         margin: 0;
@@ -28,11 +30,11 @@
 
                 p{
 
-                    color: #0a8543;
+                    color: $primary-color;
                 }
 
                 svg {
-                    stroke: #0a8543;
+                    stroke: $primary-color;
                 }
             }
         }
