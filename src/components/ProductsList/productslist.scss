@@ -1,8 +1,18 @@
 .filter-buttons {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    column-gap: 1rem;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+    overflow-x: scroll;
+    webkit-overflow-scroll: touch;
+
+    @media only screen and (max-width: 576px) {
+        .button {
+            padding: 10px 16px;
+            min-height: 42px;
+            font-size: 18px;
+        }
+    }
 }
 
 .product {
@@ -18,9 +28,7 @@
         margin-right: 16px;
     }
 
-    .product-details {
-        
-    }
+    .product-details {}
 
     .item-body {
         h4 {
