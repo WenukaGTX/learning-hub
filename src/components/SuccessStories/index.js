@@ -31,7 +31,7 @@ function successStories(props) {
   return (
     <section className='section-padding bt-ash'>
       <div className='container'>
-        <h2 className='mb-2 text-center'>Success Stories</h2>
+        <h2 className='mb-4 text-center'>Success Stories</h2>
         <div className='row'>
           {successStoryItems.map((item) => (
             <div className='col-4 mb-2-xs' key={item.id}>

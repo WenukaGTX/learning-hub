@@ -90,4 +90,16 @@
       height: 150px;
     }
   }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+
+    .react-tabs__tab-list {
+      margin-bottom: 20px;
+    }
+
+    .react-tabs__tab-panel--selected {
+      margin-left: 0;
+    }
+  }
 }

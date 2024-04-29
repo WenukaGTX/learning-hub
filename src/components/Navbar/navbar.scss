@@ -6,12 +6,15 @@
         display: flex;
         flex-wrap: inherit;
         align-items: center;
-        justify-content: space-between;
     }
 
-    &-right {
+    .nav-links {
         a+a {
             margin-left: 16px;
+        }
+
+        &.nav-links-right {
+            margin-left: auto;
         }
     }
 }
