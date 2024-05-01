@@ -1,8 +1,10 @@
+@import '../../scss/variables';
+
 .footer {
-    font-size: 14px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    background-color: #393a3d;
+    font-size: $font-small;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: $grey-dark;
 
     .container {
         display: flex;
@@ -10,16 +12,16 @@
     }
 
     .footer-logo {
-        margin: 0 auto 20px;
+        margin: 0 auto 1.25rem;
 
         img {
-            height: 30px;
+            height: 1.875rem;
         }
     }
 
     .footer-right {
         .footer-text {
-            color: #ffffff;
+            color: $white-space;
             text-align: center;
         }
 

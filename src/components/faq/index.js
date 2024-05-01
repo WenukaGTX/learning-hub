@@ -1,11 +1,14 @@
 import Accordion from '../Accordion';
-import './faq.scss';
-//import { faqs } from '../../services/faqData.js';
+//import SearchBar from '../Search';
+
+import "./faq.scss"
 
 import React, { useState, useEffect } from 'react';
+//import SearchResultList from '../Search/SearchResultList';
 
 function FAQs() {
     const [faqset, setFaqset] = useState(null);
+    const [results, setResults] = useState([]);
 
     useEffect(() => {
         fetch('https://662898c654afcabd0736410c.mockapi.io/intuit/training/reactjs/FrequentlyAskedQuestions')
@@ -30,6 +33,14 @@ function FAQs() {
         <section className='section-padding bt-ash'>
             <div className='container'>
                 <h2 className='mb-4 text-center'>Frequently asked questions</h2>
+                {/* <div className='search-bar-container'>
+                    <SearchBar setResults={setResults} />
+
+                    <div>
+                        <SearchResultList results={results} />
+                    </div>
+                </div>
+                 */}
                 {renderFAQs()}
             </div>
         </section>

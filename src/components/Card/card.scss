@@ -1,15 +1,17 @@
+@import '../../scss/variables';
+
 .card {
     text-align: center;
 
     .card-image {
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         max-width: 100%;
     }
 
     .card-header {
         margin-top: 0;
-        margin-bottom: 6px;
-        font-weight: 500;
+        margin-bottom: 0.375rem;
+        font-weight: $font-weight;
     }
 
     .card-description {

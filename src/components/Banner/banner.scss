@@ -1,10 +1,13 @@
+@import '../../scss/variables';
+
 .banner {
-    background-color: #0d333f;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    background-color: $secondary-color;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 5rem;
 
     &-dark {
-        color: #ffffff;
+        color: $white-space;
     }
 
     &-right {
