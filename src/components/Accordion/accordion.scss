@@ -2,7 +2,7 @@
 
 .accordion {
     .item {
-        border-top: 1px solid $ash-light;
+        border-top: 1px solid rgba(0,0,0,.2);
         border-bottom: none;
         padding: 0;
         margin: 0;
@@ -44,11 +44,17 @@
             overflow: hidden;
             transition: max-height 0.5s ease;
             padding-right: 2.5rem;
+
+            
+            p {
+                margin-bottom: 2rem;
+            }
         }
+        
         .active-box {
-            max-height: 245px;
-            margin-bottom: 2rem;
+            max-height: 105px;
             transition: max-height 0.5s ease;
+
         }
     }
 

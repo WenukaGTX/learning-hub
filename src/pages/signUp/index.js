@@ -115,7 +115,7 @@ function SignUp() {
 
             <Button className="width-100" type="primary" buttonText="Submit" />
           </form>
-          {successMessage && <h5 className="text-center mt-3 mb-0">{successMessage}</h5>}
+          {successMessage && <h5 className="text-center mt-3 mb-0 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash">{successMessage}</h5>}
         </div>
       </div>
     </div>

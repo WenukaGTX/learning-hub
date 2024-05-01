@@ -89,7 +89,7 @@ function Subscription() {
           </div>
           <Button type="primary" buttonText="Subscribe now" />
         </form>
-        {successMessage && <p className='mt-2 mb-0 text-center'>{successMessage}</p>}
+        {successMessage && <h4 className='mt-2 mb-0 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash text-center'>{successMessage}</h4>}
       </div>
     </section>
   );
