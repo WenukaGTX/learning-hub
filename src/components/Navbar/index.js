@@ -4,7 +4,7 @@ import logo from '../../images/logo.PNG';
 
 function Navbar() {
   return (
-    <header className="navbar">
+    <header className="navbar navbar-sticky">
       <div className='container'>
         <Link to='/' className='flex'><img src={logo} alt="Logo" /></Link>
         <nav className="nav-links nav-links-right">
