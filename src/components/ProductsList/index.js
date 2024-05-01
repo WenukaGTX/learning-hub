@@ -41,7 +41,7 @@ function ProductList() {
                   <div className='product-details'>
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
-                    <Link to={`/course-details/${item.id}`} className='button mt-auto'>View course</Link>
+                    <Link to={`/course-details/${item.id}`} className='button mt-auto' target='_blank'>View course</Link>
                   </div>
                 </div>
               </div>

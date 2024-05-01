@@ -76,7 +76,9 @@ function Subscription() {
       <div className='container'>
         <h2 className='mb-2 text-center'>Get the latest news and upadates about QuickBooks certifications</h2>
         <h4 className='text-center'>Lorem Ipsum has been the industry's standard dummy text.</h4>
-        <form onSubmit={handleSubmit} className='subscribe-form'>
+        {
+          !successMessage &&
+          <form onSubmit={handleSubmit} className='subscribe-form'>
           <div className='email-input width-100'>
             <input className={`input-field ${errors.email ? 'error' : ''}`}
               type="text"
@@ -89,7 +91,9 @@ function Subscription() {
           </div>
           <Button type="primary" buttonText="Subscribe now" />
         </form>
-        {successMessage && <h4 className='mt-2 mb-0 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash text-center'>{successMessage}</h4>}
+        }
+        {successMessage && <h4 className='mt-3 mb-0 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash text-center'>{successMessage}</h4>}
+        
       </div>
     </section>
   );

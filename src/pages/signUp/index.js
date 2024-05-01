@@ -70,10 +70,13 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-ash pt-4 pb-4">
+    <div className="bg-ash pt-4 pb-4 mt-8">
       <div className="signup-form">
         <div className="container">
+          
+        {successMessage && <h5 className="text-center mt-1 mb-3 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash">{successMessage}</h5>}
           <h4 className="text-center">Sign up</h4>
+          
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
               <label className="input-label" htmlFor="fName">First Name:</label>
@@ -115,7 +118,6 @@ function SignUp() {
 
             <Button className="width-100" type="primary" buttonText="Submit" />
           </form>
-          {successMessage && <h5 className="text-center mt-3 mb-0 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash">{successMessage}</h5>}
         </div>
       </div>
     </div>
