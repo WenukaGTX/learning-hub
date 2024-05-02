@@ -13,7 +13,7 @@ import FooterSection from './components/Footer';
 function App() {
   return (
     <Router>
-      <Navbar type='light'/>
+      <Navbar type='light' position='sticky'/>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/course-details/:id" element={<CourseDetails />}></Route>
