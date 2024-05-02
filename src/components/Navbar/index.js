@@ -2,9 +2,9 @@ import './navbar.scss';
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.PNG';
 
-function Navbar() {
+function Navbar(props) {
   return (
-    <header className="navbar navbar-sticky">
+    <header className={`navbar navbar-${props.type ? props.type : 'light'} navbar-${props.position ? props.position : 'sticky'}`}>
       <div className='container'>
         <Link to='/' className='flex'><img src={logo} alt="Logo" /></Link>
         <nav className="nav-links nav-links-right">

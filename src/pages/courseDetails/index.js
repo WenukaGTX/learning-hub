@@ -47,7 +47,7 @@ function CourseDetails() {
             <img className="mb-1" src="https://placehold.co/100" alt="course logo" />
             <h1>{product.title}</h1>
             <div className="info-row">
-              <p>Duration {product.duration} hours</p>
+              <p>Duration: {product.duration}</p>
               <p className="spacer">|</p>
               <p>Last updated {product.lastUpdated}</p>
             </div>

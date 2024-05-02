@@ -61,7 +61,6 @@ function Subscription() {
     }
   };
 
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
