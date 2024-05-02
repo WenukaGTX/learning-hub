@@ -13,8 +13,8 @@ function Banner() {
     <div className="banner banner-dark">
       <div className='container flex justify-space-between'>
         <div className='banner-left'>
-          <h1>Get certified with QuickBooks for free</h1>
-          <h3 className='mb-4'>Gain skills plus a professional certificate</h3>
+          <h1>Get certified with QuickBooks for FREE</h1>
+          <h4 className='mb-4 mt-3'>Gain skills plus a professional certificate</h4>
           <Button type="primary" buttonText="View certifications" onClick={handleClickScrolltoProjects}></Button>
         </div>
         <div className='banner-right'>
