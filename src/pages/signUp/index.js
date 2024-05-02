@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
+import { useAuth } from '../../utilities/AuthContext';
 import './signUp.scss';
 
 function SignUp() {
@@ -9,7 +11,9 @@ function SignUp() {
     email: '',
   });
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState('');
+  const [waiting, setWaiting] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -49,6 +53,8 @@ function SignUp() {
     e.preventDefault();
 
     if (validateForm()) {
+      setWaiting(true);
+
       try {
         const response = await fetch('https://66260355052332d55321482e.mockapi.io/intuit/trainings/reactjs/users', {
           method: 'POST',
@@ -60,23 +66,26 @@ function SignUp() {
         if (!response.ok) {
           throw new Error('Failed to submit form');
         }
-        setSuccessMessage('Form submitted successfully');
         setFormData({ fName: '', lName: '', email: '' });
         setErrors({});
+        login();
+        setWaiting(false);
+        redirectToHomePage();
       } catch (error) {
         console.error('Error submitting form:', error.message);
       }
     }
   };
 
+  const redirectToHomePage = () => {
+    navigate('/');
+  };
+
   return (
     <div className="bg-ash pt-4 pb-4 mt-8">
       <div className="signup-form">
         <div className="container">
-          
-        {successMessage && <h5 className="text-center mt-1 mb-3 pt-2 pb-2 bt-ash br-ash bb-ash bl-ash">{successMessage}</h5>}
           <h4 className="text-center">Sign up</h4>
-          
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
               <label className="input-label" htmlFor="fName">First Name:</label>
@@ -116,7 +125,7 @@ function SignUp() {
               {errors.email && <div className="input-error">{errors.email}</div>}
             </div>
 
-            <Button className="width-100" type="primary" buttonText="Submit" />
+            <Button className="width-100" type="primary" buttonText="Submit" loading={waiting} />
           </form>
         </div>
       </div>

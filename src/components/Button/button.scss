@@ -4,7 +4,9 @@
     color: $black;
     background-color: $white-space;
     border: 1px solid $secondary-color;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-weight: $font-weight;
     line-height: 1.5;
     text-align: center;
@@ -51,5 +53,9 @@
             border: 1px solid $black;
             color: $white-space;
         }
+    }
+
+    .loader {
+        margin-right: 0.5rem;
     }
 }
