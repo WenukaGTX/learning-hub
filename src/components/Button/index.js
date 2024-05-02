@@ -1,3 +1,4 @@
+import Loader from '../Loader';
 import './button.scss';
 
 function Button(props) {
@@ -5,7 +6,10 @@ function Button(props) {
     <button
       className={`button button-${props.type} ${props.className}`}
       onClick={props.onClick}
-    >{props.buttonText}</button>
+    >
+      {props.loading && <Loader size={20} thickness={2} />}
+      {props.buttonText}
+    </button>
   );
 }
 

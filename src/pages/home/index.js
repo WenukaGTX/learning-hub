@@ -8,7 +8,7 @@ import FAQs from '../../components/faq';
 
 function Home() {
   return (
-    <div className="learning-hub-body-container">
+    <div>
       <Banner/>
       <QuickbooksStats/>
       <ProductsList/>
