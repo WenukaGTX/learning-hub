@@ -9,7 +9,7 @@ function App() {
     return (
         <section className='section-padding bt-ash'>
             <div className='container'>
-                <h2 className='mb-4 text-center'>Assisted Learning Process</h2>
+                <h2 className='mb-4 text-center'>Assisted learning process</h2>
                 <Tabs className="Tabs">
                     <TabList>
                         <Tab>Enhanced learning experience</Tab>
@@ -24,7 +24,7 @@ function App() {
                             </div>
                             <div>
                                 <h4>Enhanced learning experience</h4>
-                                <p>Tab 1 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <p>Take your accounting practice to the next level with industry recognized certification. Manage all your clients and work. All in one place. Gain skills with free training. We offer flexible accounting plans to fit businesses small and large, across all industries,</p>
                                 <div className='tab-cta'>
                                     <Button buttonText="Read more"></Button>
                                 </div>
@@ -39,7 +39,7 @@ function App() {
                             </div>
                             <div>
                                 <h4>Unlimited access</h4>
-                                <p>Tab 2 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <p>Access at anytime, anywhere and streamline productivity with accountant-only tools. Easy, efficient and innovative accounting software for accountants and accounting firms</p>
                                 <div className='tab-cta'>
                                     <Button type="secondary" buttonText="Read more"></Button>
                                 </div>
@@ -53,7 +53,7 @@ function App() {
                             </div>
                             <div>
                                 <h4>Community support</h4>
-                                <p>Tab 3 Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <p>Helps accounting professionals manage their practice workflow, save time and improve efficiency by automating time consuming accounting tasks and gives them access to their clients’ books anytime, anywhere.</p>
                                 <div className='tab-cta'>
                                     <Button type="secondary" buttonText="Read more"></Button>
                                 </div>

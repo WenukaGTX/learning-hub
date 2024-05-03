@@ -8,21 +8,22 @@ function QuickbooksStats() {
         <h2 className='mb-3'>What is QuickBooks?</h2>
         <div className='row'>
           <div className='col-3 mb-2-xs'>
-            <p>QuickBooks Online Accountant is a cloud-based accounting software for accountants that allows accounting professionals to access multiple clients from one login in real-time.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+            <p>QuickBooks is a user-friendly, simple accounting software that tracks your business income and expenses, and organises your financial information for you, eliminating manual data entry.</p>
+            <p>QuickBooks simplifies small business accounting and automates tasks such as; Bookkeeping, Invoicing, Time tracking, Sales tax management, Budgeting, Bank reconciliation and Inventory tracking.</p>
             <Link className="button">Read more</Link>
           </div>
           <div className='col-3 mb-2-xs'>
             <div className='feature-card'>
-              <h4>Feature title</h4>
-              <p>Lorem Ipsum has been the industry's standard dummy text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <h4>All your work in one place</h4>
+              <p>Manage your work, your clients and your accounting practice, all under one login with QuickBooks Online Accountant.</p> <p>You can easily keep track of your business expenses so you can save time, not receipts. </p>
               <Link>Read more</Link>
             </div>
           </div>
           <div className='col-3'>
             <div className='feature-card'>
-              <h4>Feature title</h4>
-              <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+              <h4>Easy, efficient and innovative</h4>
+              <p>Access anytime, anywhere and streamline productivity with accountant-only tools.</p>
+              <p>QuickBooks makes it easy to monitor and share how your business is performing and trusted by over 600,000 accountants worldwide.</p>
               <Link>Read more</Link>
             </div>
           </div>
