@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
-import { useAuth } from '../../utilities/AuthContext';
-import firebase from 'firebase/app';
+import { doSignInWithEmailAndPassword, doSignInWithGoogle } from "../../utilities/auth";
+import { useAuth } from "../../utilities/AuthContext";
 import 'firebase/auth'
 import './login.scss';
 
@@ -13,7 +13,7 @@ function Login() {
   });
   const [errors, setErrors] = useState({});
   const [waiting, setWaiting] = useState(false);
-  const { login } = useAuth();
+  const { userLoggedIn } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -42,13 +42,23 @@ function Login() {
     return valid;
   };
 
-  const handleLogin = async () => {
-    try {
-      // await firebase.auth().signInWithEmailAndPassword(email, password);
-      // Login successful
-    } catch (error) {
-      // Handle login error
-      console.error(error.message);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (validateForm() && waiting) {
+      setWaiting(true);
+      await doSignInWithEmailAndPassword(email, password);
+    }
+  };
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+
+    if (validateForm() && waiting) {
+      setWaiting(true);
+      await doSignInWithGoogle().catch(err => {
+        setWaiting(false);
+      });
     }
   };
 

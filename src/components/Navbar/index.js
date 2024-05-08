@@ -5,7 +5,7 @@ import { useAuth } from '../../utilities/AuthContext';
 import Button from '../Button';
 
 function Navbar(props) {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, doSignOut, currentUser } = useAuth();
 
   return (
     <header className={`navbar navbar-${props.type ? props.type : 'light'} navbar-${props.position ? props.position : 'sticky'}`}>
@@ -13,7 +13,10 @@ function Navbar(props) {
         <Link to='/' className='flex'><img src={logo} alt="Logo" /></Link>
         <nav className="nav-links nav-links-right">
           {isLoggedIn &&
-            <Button onClick={logout} buttonText='Sign out' />
+            <>
+              <Button onClick={doSignOut} buttonText='Sign out' />
+              <span>{currentUser.name}</span>
+            </>
           }
           {!isLoggedIn &&
             <>

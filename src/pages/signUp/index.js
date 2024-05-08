@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import { useAuth } from '../../utilities/AuthContext';
+import { doCreateUserWithEmailAndPassword } from "../../utilities/auth";
 import './signUp.scss';
 
 function SignUp() {
@@ -52,28 +53,29 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
-      setWaiting(true);
+    if (validateForm() && waiting) {
 
-      try {
-        const response = await fetch('https://66260355052332d55321482e.mockapi.io/intuit/trainings/reactjs/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-        if (!response.ok) {
-          throw new Error('Failed to submit form');
-        }
-        setFormData({ fName: '', lName: '', email: '' });
-        setErrors({});
-        login();
-        setWaiting(false);
-        redirectToHomePage();
-      } catch (error) {
-        console.error('Error submitting form:', error.message);
-      }
+      
+
+      // try {
+      //   const response = await fetch('https://66260355052332d55321482e.mockapi.io/intuit/trainings/reactjs/users', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(formData),
+      //   });
+      //   if (!response.ok) {
+      //     throw new Error('Failed to submit form');
+      //   }
+      //   setFormData({ fName: '', lName: '', email: '' });
+      //   setErrors({});
+      //   login();
+      //   setWaiting(false);
+      //   redirectToHomePage();
+      // } catch (error) {
+      //   console.error('Error submitting form:', error.message);
+      // }
     }
   };
 
