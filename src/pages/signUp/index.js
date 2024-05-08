@@ -13,7 +13,7 @@ function SignUp() {
   });
   const [errors, setErrors] = useState({});
   const [waiting, setWaiting] = useState(false);
-  const { login } = useAuth();
+  const { isLoggedIn } = useAuth();
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {

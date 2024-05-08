@@ -18,10 +18,10 @@ export const AuthProvider = ({ children }) => {
     async function initializeUser(user) {
         if (user) {
             setCurrentUser({ ...user });
-            isLoggedIn(true);
+            setIsLoggedIn(true);
         } else {
             setCurrentUser(null);
-            isLoggedIn(false);
+            setIsLoggedIn(false);
         }
         setAuthLoading(false);
     };
@@ -35,11 +35,12 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         // Perform logout logic
         setIsLoggedIn(false);
-        localStorage.removeItem('isLoggedIn');
+        // localStorage.removeItem('isLoggedIn');
+        localStorage.setItem('isLoggedIn', 'false');
     };
 
     return (
-        <AuthContext.Provider value={{ isLoggedIn, currentUser, authLoading, login, logout }}>
+        <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, authLoading, login, logout }}>
             {!authLoading && children}
         </AuthContext.Provider>
     );

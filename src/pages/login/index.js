@@ -13,7 +13,7 @@ function Login() {
   });
   const [errors, setErrors] = useState({});
   const [waiting, setWaiting] = useState(false);
-  const { userLoggedIn } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -24,16 +24,16 @@ function Login() {
     const newErrors = {};
 
     // Validate email
-    if (!formData.email.trim()) {
+    if (!email.trim()) {
       newErrors.email = 'Email is required';
       valid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = 'Invalid email address';
       valid = false;
     }
 
     // Validate first name
-    if (!formData.password.trim()) {
+    if (!password.trim()) {
       newErrors.password = 'Password is required';
       valid = false;
     }
@@ -45,16 +45,19 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (validateForm() && waiting) {
+    if (validateForm() && !waiting) {
       setWaiting(true);
       await doSignInWithEmailAndPassword(email, password);
+      login();
+      setWaiting(false);
+      redirectToHomePage();
     }
   };
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
 
-    if (validateForm() && waiting) {
+    if (waiting) {
       setWaiting(true);
       await doSignInWithGoogle().catch(err => {
         setWaiting(false);
@@ -101,6 +104,7 @@ function Login() {
             </div>
             <Button className="width-100" type="primary" buttonText="Login" loading={waiting} />
           </form>
+          {/* <Button className="width-100 mt-2" buttonText="Google" loading={waiting} onClick={handleGoogleSignIn} /> */}
         </div>
       </div>
     </div>

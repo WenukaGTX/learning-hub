@@ -14,15 +14,17 @@ import { AuthProvider, useAuth } from './utilities/AuthContext';
 import Login from './pages/login';
 
 function App() {
-  const { login } = useAuth();
+  const { setIsLoggedIn } = useAuth();
 
   useEffect(() => {
     const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (storedIsLoggedIn === 'true') {
-      login();
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
     }
-  }, [login]);
+  }, []);
 
   return (
     <Router>
