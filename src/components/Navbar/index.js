@@ -14,13 +14,13 @@ function Navbar(props) {
         <nav className="nav-links nav-links-right">
           {isLoggedIn &&
             <>
+              <span>{currentUser.email}</span>
               <Button onClick={logout} buttonText='Sign out' />
-              <span>{currentUser.name}</span>
             </>
           }
           {!isLoggedIn &&
             <>
-              <Link to='/sign-up' className='button button-primary'>Sign up<span className='hide-xs'> for FREE</span></Link>
+              <Link to='/sign-up' className='button button-primary'>Sign up <span className='hide-xs ml-1'>for FREE</span></Link>
               <Link to='/login' className='button'>Sign in</Link>
             </>
           }

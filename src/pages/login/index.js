@@ -20,7 +20,6 @@ function Login() {
     let valid = true;
     const newErrors = {};
 
-    // Validate email
     if (!email.trim()) {
       newErrors.email = 'Email is required';
       valid = false;
@@ -29,7 +28,6 @@ function Login() {
       valid = false;
     }
 
-    // Validate first name
     if (!password.trim()) {
       newErrors.password = 'Password is required';
       valid = false;
