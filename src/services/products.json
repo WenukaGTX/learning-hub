@@ -211,80 +211,80 @@
         "partnerCompanies": [
             {
                 "id": 1,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLzu9XoqapolBl9WzFySpp8DMlQnUpqdn-dA&s"
             },
             {
                 "id": 2,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5yg1XHYFAKbt90c8mVdpaxKOIaHNVkRA91A&s"
             },
             {
                 "id": 3,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsy6Ng0OBu9ENdx_DVkohcHCADGtGcgcvhvw&s"
             },
             {
                 "id": 4,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVN6Lvz2OKXUzE4oPIrZBCJTyDqtQgvhc9nw&s"
             },
             {
                 "id": 5,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoE58FlfThFWikCsRkaXjEF54Leaeng5p62A&s"
             },
             {
                 "id": 6,
-                "logo": "https://placehold.co/200x50"
+                "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrnQW5P__5ziDVwT8YEE9XLWR5qCmNKM-r9g&s"
             }
         ],
         "benefits": [
             {
                 "id": 1,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh46i03fBnA0f_1b4l0ImWcMoHaLF21ChhIQ&s",
+                "title": "Networking",
+                "description": "Among top professionals"
             },
             {
                 "id": 2,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqGQ79QaJY-TxPI-aKuThkrKdByBymWEQdPF78Buv_2UQxvnnNTra0m6eGx-v8lgHhMZo&usqp=CAU",
+                "title": "Career growth",
+                "description": "Fast track the ladder"
             },
             {
                 "id": 3,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlSG8C67jlNdExDQ9_o2ZaiOvz_KoX2AmFMw&s",
+                "title": "Wide knowledge",
+                "description": "Learn the product better"
             },
             {
                 "id": 4,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTchDFD7HCK49KeqXaGSRFNM98LAPJegb1cRw&s",
+                "title": "Manage yourself",
+                "description": "Use the tools & features"
             }
         ],
         "highScorers": [
             {
                 "id": 1,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
-            },
-            {
+                "image": "https://randomuser.me/api/portraits/men/79.jpg",
+                "title": "Gerome Adrian",
+                "description": "Thames & Co"
+              },
+              {
                 "id": 2,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
-            },
-            {
+                "image": "https://randomuser.me/api/portraits/men/69.jpg",
+                "title": "Karan Singh",
+                "description": "IFS India"
+              },
+              {
                 "id": 3,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
-            },
-            {
+                "image": "https://randomuser.me/api/portraits/women/0.jpg",
+                "title": "Kane D",
+                "description": "Delta UK"
+              },
+              {
                 "id": 4,
-                "image": "https://placehold.co/120",
-                "title": "Title goes here",
-                "description": "Subtitle goes here"
-            }
+                "image": "https://randomuser.me/api/portraits/men/61.jpg",
+                "title": "Shane W",
+                "description": "Corner AU"
+              }
         ],
         "id": "1"
     },

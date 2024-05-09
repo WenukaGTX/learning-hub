@@ -147,6 +147,10 @@
   width: 100%;
 }
 
+.width-60 {
+  width: 60%;
+}
+
 .spacer {
   margin-right: 0.375rem;
   margin-left: 0.375rem;
@@ -179,11 +183,15 @@
 }
 
 .vh-fit {
-  height: calc(100vh - 168px);
+  height: calc(100vh);
 }
 
 .bg-ash {
   background: $ash-light;
+}
+
+.bg-mint {
+  background: $mint;
 }
 
 .section-bg-ash {

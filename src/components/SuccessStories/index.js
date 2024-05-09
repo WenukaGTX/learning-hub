@@ -3,27 +3,27 @@ import Card from '../../components/Card';
 const successStoryItems = [
   {
     "id": 1,
-    "image": "https://placehold.co/120",
-    "title": "Title goes here",
-    "description": "Subtitle goes here"
+    "image": "https://randomuser.me/api/portraits/men/79.jpg",
+    "title": "Gerome Adrian",
+    "description": "Thames & Co"
   },
   {
     "id": 2,
-    "image": "https://placehold.co/120",
-    "title": "Title goes here",
-    "description": "Subtitle goes here"
+    "image": "https://randomuser.me/api/portraits/men/69.jpg",
+    "title": "Karan Singh",
+    "description": "IFS India"
   },
   {
     "id": 3,
-    "image": "https://placehold.co/120",
-    "title": "Title goes here",
-    "description": "Subtitle goes here"
+    "image": "https://randomuser.me/api/portraits/women/0.jpg",
+    "title": "Kane D",
+    "description": "Delta UK"
   },
   {
     "id": 4,
-    "image": "https://placehold.co/120",
-    "title": "Title goes here",
-    "description": "Subtitle goes here"
+    "image": "https://randomuser.me/api/portraits/men/61.jpg",
+    "title": "Shane W",
+    "description": "Corner AU"
   }
 ];
 

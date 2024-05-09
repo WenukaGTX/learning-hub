@@ -17,9 +17,9 @@
     }
 
     .nav-links {
-        a+a {
-            margin-left: 1rem;
-        }
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
 
         &.nav-links-right {
             margin-left: auto;
