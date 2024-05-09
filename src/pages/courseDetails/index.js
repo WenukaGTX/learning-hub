@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Card from '../../components/Card';
 import ListItem from '../../components/ListItem';
 import './courseDetails.scss';
+import logo from "../../images/qb-logo-sqr.png";
 
 function CourseDetails() {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ function CourseDetails() {
         setBenefits(data.benefits);
         setHighScorers(data.highScorers)
         setLoading(false);
- 
+
       })
       .catch(error => {
         setLoading(false);
@@ -41,13 +42,12 @@ function CourseDetails() {
       });
   }, [id]);
 
-
   if (!loading && !errorMessage) {
     return (
       <div>
         <div className="banner banner-dark">
           <div className="container">
-            <img className="mb-1" src="https://placehold.co/100" alt="course logo" />
+            <img className="mb-1" src={logo} alt="course logo" height={80} />
             <h1>{product.title}</h1>
             <div className="info-row">
               <p>Duration: {product.duration}</p>
@@ -64,8 +64,6 @@ function CourseDetails() {
           </div>
         </div>
 
-            
-
         {
           (suites.length > 0) ? (
             <section className='section-padding bt-ash'>
@@ -80,47 +78,48 @@ function CourseDetails() {
                   />
                 ))}
               </div>
-            </section>    
+            </section>
           ) : (console.log('No Suites available!'))
-        },
-        
+        }
+
         {
           (companyLogos.length > 0) ? (
             <section className='section-padding bt-ash'>
               <div className="container">
-                <h3 className='mb-2'>Learners work at</h3>
+                <h3 className='mb-2 text-center'>Learners work at</h3>
                 <div className='row'>
                   {companyLogos.map((logo) => (
                     <div className="col-3 mb-2 text-center" key={logo.id}>
-                      <img src={logo.logo} alt={`logo ${logo.id}`} />
+                      <img src={logo.logo} alt={`logo ${logo.id}`} className='width-60'/>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
           ) : (console.log('No partner companies to show in this course!'))
-        },
+        }
 
         {
           (benefits.length > 0) ? (
             <section className='section-padding bt-ash'>
               <div className="container">
                 <h3 className='text-center mb-3'>Benefits of the career path</h3>
-                  <div className='row'>
-                    {benefits.map((item) => (
-                      <div className='col-4 mb-2-xs' key={item.id} >
-                        <Card
-                          image={item.image}
-                          title={item.title}
-                          description={item.description}
-                        />
-                      </div>
-                    ))}
-                  </div>
-              </div>            
+                <div className='row'>
+                  {benefits.map((item) => (
+                    <div className='col-4 mb-2-xs' key={item.id} >
+                      <Card
+                        image={item.image}
+                        title={item.title}
+                        description={item.description}
+                        cardImageSize={200}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </section>
           ) : (console.log('No benefits to show in this course!'))
-        },
+        }
 
         {
           (highScorers.length > 0) ? (
@@ -143,13 +142,11 @@ function CourseDetails() {
             </section>
           ) : (console.log('No high scorers to show in this course!'))
         }
-       
-        
       </div>
     );
   }
 
-  if (loading) {
+  if (!loading) {
     return (<div className="container flex align-items-center justify-content-center vh-fit">Loading...</div>)
   }
 
@@ -157,7 +154,7 @@ function CourseDetails() {
     return (<div className="container flex align-items-center justify-content-center vh-fit">{errorMessage.message}</div>)
   }
 
-  
+
 }
 
 export default CourseDetails;

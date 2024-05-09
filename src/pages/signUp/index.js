@@ -2,15 +2,16 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import { useAuth } from '../../utilities/AuthContext';
+import { doCreateUserWithEmailAndPassword } from "../../utilities/auth";
 import './signUp.scss';
 
 function SignUp() {
   const [formData, setFormData] = useState({
-    fName: '',
-    lName: '',
     email: '',
+    pword: ''
   });
   const [errors, setErrors] = useState({});
+  const [signupErrors, setSignupErrors] = useState("");
   const [waiting, setWaiting] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -24,24 +25,16 @@ function SignUp() {
     let valid = true;
     const newErrors = {};
 
-    // Validate first name
-    if (!formData.fName.trim()) {
-      newErrors.fName = 'First name is required';
-      valid = false;
-    }
-
-    // Validate last name
-    if (!formData.lName.trim()) {
-      newErrors.lName = 'Last name is required';
-      valid = false;
-    }
-
-    // Validate email
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
       valid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Invalid email address';
+      valid = false;
+    }
+
+    if (!formData.pword.trim()) {
+      newErrors.pword = 'Password is required';
       valid = false;
     }
 
@@ -52,27 +45,22 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
+    if (validateForm() && !waiting) {
       setWaiting(true);
 
       try {
-        const response = await fetch('https://66260355052332d55321482e.mockapi.io/intuit/trainings/reactjs/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-        if (!response.ok) {
-          throw new Error('Failed to submit form');
-        }
-        setFormData({ fName: '', lName: '', email: '' });
-        setErrors({});
+        const user = await doCreateUserWithEmailAndPassword(formData.email, formData.pword);
         login();
         setWaiting(false);
         redirectToHomePage();
       } catch (error) {
-        console.error('Error submitting form:', error.message);
+        console.log(error.code);
+        if (error.code === 'auth/weak-password' || error.code === 'auth/invalid-credential') {
+          setSignupErrors("Password should be at least 6 characters");
+        } else {
+          setSignupErrors(error.message);
+        }
+        setWaiting(false);
       }
     }
   };
@@ -88,32 +76,6 @@ function SignUp() {
           <h4 className="text-center">Sign up</h4>
           <form onSubmit={handleSubmit}>
             <div className="mb-2">
-              <label className="input-label" htmlFor="fName">First Name:</label>
-              <input
-                className={`input-field ${errors.fName ? 'error' : ''}`}
-                type="text"
-                id="fName"
-                name="fName"
-                value={formData.fName}
-                onChange={handleInputChange}
-              />
-              {errors.fName && <div className="input-error">{errors.fName}</div>}
-            </div>
-
-            <div className="mb-2">
-              <label className="input-label" htmlFor="lName">Last Name:</label>
-              <input
-                className={`input-field ${errors.lName ? 'error' : ''}`}
-                type="text"
-                id="lName"
-                name="lName"
-                value={formData.lName}
-                onChange={handleInputChange}
-              />
-              {errors.lName && <div className="input-error">{errors.lName}</div>}
-            </div>
-
-            <div className="mb-2">
               <label className="input-label" htmlFor="name">Email:</label>
               <input
                 className={`input-field ${errors.email ? 'error' : ''}`}
@@ -125,8 +87,21 @@ function SignUp() {
               {errors.email && <div className="input-error">{errors.email}</div>}
             </div>
 
+            <div className="mb-2">
+              <label className="input-label" htmlFor="pword">Password:</label>
+              <input
+                className={`input-field ${errors.pword ? 'error' : ''}`}
+                id="pword"
+                name="pword"
+                value={formData.pword}
+                onChange={handleInputChange}
+              />
+              {errors.pword && <div className="input-error">{errors.pword}</div>}
+            </div>
+
             <Button className="width-100" type="primary" buttonText="Submit" loading={waiting} />
           </form>
+          {signupErrors && <div className="input-error text-center">{signupErrors}</div>}
         </div>
       </div>
     </div>
