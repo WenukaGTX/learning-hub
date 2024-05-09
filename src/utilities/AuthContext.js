@@ -27,15 +27,12 @@ export const AuthProvider = ({ children }) => {
     };
 
     const login = () => {
-        // Perform login logic
         setIsLoggedIn(true);
         localStorage.setItem('isLoggedIn', 'true');
     };
 
     const logout = () => {
-        // Perform logout logic
         setIsLoggedIn(false);
-        // localStorage.removeItem('isLoggedIn');
         localStorage.setItem('isLoggedIn', 'false');
     };
 

@@ -7,11 +7,8 @@ import 'firebase/auth'
 import './login.scss';
 
 function Login() {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState("");
+  const [loginError, setLoginError] = useState("");
   const [waiting, setWaiting] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -47,10 +44,20 @@ function Login() {
 
     if (validateForm() && !waiting) {
       setWaiting(true);
-      await doSignInWithEmailAndPassword(email, password);
-      login();
-      setWaiting(false);
-      redirectToHomePage();
+
+      try {
+        await doSignInWithEmailAndPassword(email, password);
+        login();
+        setWaiting(false);
+        redirectToHomePage();
+      } catch (error) {
+        if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+          setLoginError('Invalid email or password. Please try again.');
+        } else {
+          setLoginError('An error occurred. Please try again later.');
+        }
+        setWaiting(false);
+      }
     }
   };
 
@@ -104,6 +111,7 @@ function Login() {
             </div>
             <Button className="width-100" type="primary" buttonText="Login" loading={waiting} />
           </form>
+          {loginError && <div className="input-error text-center">{loginError}</div>}
           {/* <Button className="width-100 mt-2" buttonText="Google" loading={waiting} onClick={handleGoogleSignIn} /> */}
         </div>
       </div>
