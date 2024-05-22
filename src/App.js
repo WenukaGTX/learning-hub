@@ -12,6 +12,7 @@ import Home from "./pages/home";
 import SignUp from "./pages/signUp";
 import { AuthProvider, useAuth } from './utilities/AuthContext';
 import Login from './pages/login';
+import { PublicClientApplication } from '@azure/msal-browser';
 
 function App() {
   const { setIsLoggedIn } = useAuth();

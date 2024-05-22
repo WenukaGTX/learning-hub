@@ -5,6 +5,7 @@ import { doSignInWithEmailAndPassword, doSignInWithGoogle } from "../../utilitie
 import { useAuth } from "../../utilities/AuthContext";
 import 'firebase/auth'
 import './login.scss';
+import { signIn, signOut } from '../../utilities/authUtils';
 
 function Login() {
   const [errors, setErrors] = useState("");
@@ -39,24 +40,26 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
+    await signIn(email, password);
 
-    if (validateForm() && !waiting) {
-      setWaiting(true);
+    // if (validateForm() && !waiting) {
+    //   setWaiting(true);
 
-      try {
-        await doSignInWithEmailAndPassword(email, password);
-        login();
-        setWaiting(false);
-        redirectToHomePage();
-      } catch (error) {
-        if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
-          setLoginError('Invalid email or password. Please try again.');
-        } else {
-          setLoginError('An error occurred. Please try again later.');
-        }
-        setWaiting(false);
-      }
-    }
+    //   try {
+    //     await doSignInWithEmailAndPassword(email, password);
+    //     login();
+    //     setWaiting(false);
+    //     redirectToHomePage();
+    //   } catch (error) {
+    //     if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+    //       setLoginError('Invalid email or password. Please try again.');
+    //     } else {
+    //       setLoginError('An error occurred. Please try again later.');
+    //     }
+    //     setWaiting(false);
+    //   }
+    // }
   };
 
   const handleGoogleSignIn = async (e) => {
