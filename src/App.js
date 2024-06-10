@@ -12,6 +12,8 @@ import Home from "./pages/home";
 import SignUp from "./pages/signUp";
 import { AuthProvider, useAuth } from './utilities/AuthContext';
 import Login from './pages/login';
+import { CakeView } from './features/cake/cakeView';
+import { IcecreamView } from './features/icecream/IcecreamView';
 
 function App() {
   const { setIsLoggedIn } = useAuth();
@@ -29,6 +31,8 @@ function App() {
   return (
     <Router>
       <Navbar type='light' position='sticky' />
+      {/* <CakeView /> */}
+      {/* <IcecreamView /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/course-details/:id" element={<CourseDetails />}></Route>
